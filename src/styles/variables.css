@@ -1,0 +1,29 @@
+:root {
+  /* Colors */
+  --bg-main: #060410;
+  --electric-purple: #A06BFF;
+  --active-cyan: #00D1FF;
+  --safety-orange: #FF9A2E;
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(30, 28, 40, 0.6);
+  --glass-bg-hover: rgba(40, 38, 55, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 12px;
+  
+  /* Text */
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --text-primary: #FFFFFF;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--active-cyan), var(--electric-purple));
+  --gradient-text: linear-gradient(90deg, #fff, var(--active-cyan));
+}
