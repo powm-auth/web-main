@@ -1,18 +1,19 @@
 import React from 'react';
 import styles from './GrainyBackground.module.css';
+import { motion, MotionValue } from 'framer-motion';
 
-export const GrainyBackground: React.FC = () => {
+interface GrainyBackgroundProps {
+  overlayOpacity?: MotionValue<number>;
+}
+
+export const GrainyBackground: React.FC<GrainyBackgroundProps> = ({ overlayOpacity }) => {
   return (
     <div className={styles.container}>
-      {/* Moving Gradients */}
-      <div className={styles.blobContainer}>
-        <div className={`${styles.blob} ${styles.blob1}`} />
-        <div className={`${styles.blob} ${styles.blob2}`} />
-        <div className={`${styles.blob} ${styles.blob3}`} />
-      </div>
-
-      {/* Static Grain Overlay */}
-      <div className={styles.grainOverlay} />
+      {/* Black overlay controlled by scroll */}
+      <motion.div 
+        className={styles.overlay} 
+        style={{ opacity: overlayOpacity || 0 }}
+      />
     </div>
   );
 };

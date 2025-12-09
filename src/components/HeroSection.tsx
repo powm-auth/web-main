@@ -17,7 +17,7 @@ export const HeroSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        Identity for <br /> the Shadows.
+        Prove the age. <br /> Not the identity.
       </motion.h1>
 
       <motion.p 

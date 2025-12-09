@@ -1,0 +1,242 @@
+.featureCard {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  border-color: var(--electric-purple);
+  box-shadow: inset 0 0 40px rgba(160, 107, 255, 0.05);
+}
+
+.contentWrapper {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #fff, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.caption {
+  font-size: 1rem;
+  color: var(--active-cyan);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.checkIcon {
+  color: var(--electric-purple);
+  flex-shrink: 0;
+  margin-top: 0.2em;
+}
+
+.visualContainer {
+  height: 240px;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--glass-border);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Feature 1: Developer Code */
+.codeWindow {
+  width: 90%;
+  height: 80%;
+  background: #0d0d0d;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  color: #a9b7c6;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.codeContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.phoneMini {
+  width: 80px;
+  height: 140px;
+  border: 4px solid #333;
+  border-radius: 12px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.successFlash {
+  position: absolute;
+  inset: 0;
+  background: #00D155;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Feature 2: Local Vault */
+.cloudServer {
+  width: 60px;
+  height: 40px;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneVault {
+  width: 80px;
+  height: 140px;
+  border: 4px solid var(--electric-purple);
+  border-radius: 16px;
+  background: #000;
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+  z-index: 10;
+  box-shadow: 0 0 30px rgba(160, 107, 255, 0.2);
+}
+
+.shield {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--active-cyan);
+  border-radius: 50%;
+  bottom: 40px;
+  left: 20px;
+  opacity: 0;
+  box-shadow: 0 0 20px var(--active-cyan);
+}
+
+.idCard {
+  width: 40px;
+  height: 28px;
+  background: #fff;
+  border-radius: 4px;
+  position: absolute;
+}
+
+/* Feature 3: Relay Tunnel */
+.relayLine {
+  width: 80%;
+  height: 2px;
+  background: rgba(255,255,255,0.1);
+  position: relative;
+}
+
+.relayNode {
+  width: 40px;
+  height: 40px;
+  background: #1a1a1a;
+  border: 1px solid var(--electric-purple);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.packet {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Feature 4: Trust Status */
+.statusCard {
+  width: 100%;
+  max-width: 300px;
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.statusRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  background: #00D155;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 rgba(0, 209, 85, 0.7);
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 209, 85, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(0, 209, 85, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 209, 85, 0); }
+}

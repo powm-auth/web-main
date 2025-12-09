@@ -1,29 +1,35 @@
 .logoWrapper {
-  position: relative;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; /* Much bigger */
+  height: 600px;
+  z-index: 0;
+  pointer-events: none;
+  /* Mask to create the "disappearing" effect towards the bottom/center */
+  -webkit-mask-image: linear-gradient(to bottom, black 20%, transparent 80%);
+  mask-image: linear-gradient(to bottom, black 20%, transparent 80%);
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 180px;
-  height: 180px;
 }
 
 .logoSvg {
   width: 100%;
   height: 100%;
-  z-index: 2;
-  filter: drop-shadow(0 0 20px rgba(160, 107, 255, 0.3));
+  overflow: visible;
 }
 
+/* We don't need the floor glow anymore if it's a huge background element */
 .glowFloor {
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%) rotateX(60deg);
-  width: 140px;
-  height: 40px;
-  background: var(--electric-purple);
-  filter: blur(60px);
-  opacity: 0.4;
-  z-index: 1;
-  border-radius: 50%;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .logoWrapper {
+    width: 100vw;
+    height: 100vw;
+    top: 35%;
+  }
 }
