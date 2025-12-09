@@ -3,10 +3,12 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { BentoGrid } from './components/BentoGrid';
 import { PhoneDemo } from './components/PhoneDemo';
+import { GrainyBackground } from './components/GrainyBackground';
 
 const App: React.FC = () => {
   return (
     <div style={{ minHeight: '100vh', paddingBottom: '4rem' }}>
+      <GrainyBackground />
       <Navbar />
       <main>
         <HeroSection />

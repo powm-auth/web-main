@@ -2,12 +2,15 @@ import React from 'react';
 import styles from './HeroSection.module.css';
 import { motion } from 'framer-motion';
 import { Apple, FileText } from 'lucide-react';
+import { HeroLogo } from './HeroLogo';
 
 export const HeroSection: React.FC = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.glowBg} />
       
+      <HeroLogo />
+
       <motion.h1 
         className={styles.headline}
         initial={{ opacity: 0, y: 20 }}

@@ -1,18 +1,36 @@
 .container {
-  display: flex;
-  justify-content: center;
-  padding: var(--spacing-lg) 0;
+  position: relative;
+  height: 300vh; /* Long scroll area */
+  width: 100%;
+  background: var(--bg-main);
 }
 
+.stickyWrapper {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Phone Bezel */
 .phone {
-  width: 300px;
-  height: 600px;
+  width: 320px;
+  height: 640px;
   border: 12px solid #1a1a1a;
-  border-radius: 40px;
+  border-radius: 48px;
   background: #000;
   position: relative;
-  box-shadow: 0 0 0 2px #333, 0 20px 50px rgba(0,0,0,0.5);
+  box-shadow: 
+    0 0 0 2px #333,
+    0 20px 50px rgba(0,0,0,0.5),
+    0 0 100px rgba(160, 107, 255, 0.1);
   overflow: hidden;
+  z-index: 10;
 }
 
 /* Notch */
@@ -23,11 +41,11 @@
   left: 50%;
   transform: translateX(-50%);
   width: 120px;
-  height: 25px;
+  height: 28px;
   background: #1a1a1a;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  z-index: 10;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  z-index: 20;
 }
 
 .screen {
@@ -39,46 +57,114 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.scannerLine {
+/* QR Code */
+.qrCode {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 16px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 5px;
+  box-shadow: 0 0 30px rgba(255,255,255,0.1);
+}
+
+.qrDot {
+  background: black;
+  border-radius: 2px;
+}
+
+/* Scan Line */
+.scanLine {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 4px;
   background: var(--active-cyan);
-  box-shadow: 0 0 10px var(--active-cyan), 0 0 20px var(--active-cyan);
-  animation: scan 3s infinite ease-in-out;
-  z-index: 5;
+  box-shadow: 0 0 20px var(--active-cyan), 0 0 40px var(--electric-purple);
+  z-index: 15;
 }
 
-.content {
-  width: 80%;
-  height: 60%;
-  border: 2px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
+/* Modal */
+.modal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(30, 28, 40, 0.95);
+  backdrop-filter: blur(20px);
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-top: 1px solid var(--glass-border);
+  padding: 24px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
+  z-index: 25;
+  box-shadow: 0 -10px 40px rgba(0,0,0,0.5);
 }
 
-.userIcon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+.modalTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.modalText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.yesButton {
+  width: 100%;
+  padding: 1rem;
   background: var(--gradient-primary);
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Cursor */
+.cursor {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  z-index: 50;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+}
+
+/* Success Checkmark */
+.successWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+
+.checkCircle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #00D155; /* Success Green */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
-  color: white;
-}
-
-@keyframes scan {
-  0% { top: 10%; opacity: 0; }
-  10% { opacity: 1; }
-  90% { opacity: 1; }
-  100% { top: 90%; opacity: 0; }
+  box-shadow: 0 0 60px rgba(0, 209, 85, 0.4);
 }

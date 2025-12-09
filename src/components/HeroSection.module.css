@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh; /* Changed from 90vh to 100vh */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,16 +8,18 @@
   text-align: center;
   padding: 0 var(--spacing-md);
   overflow: hidden;
+  padding-top: 8rem; /* Increased padding to clear navbar safely */
+  padding-bottom: 4rem;
 }
 
 .glowBg {
   position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(160, 107, 255, 0.2) 0%, rgba(0, 209, 255, 0.1) 50%, rgba(6, 4, 16, 0) 70%);
-  filter: blur(60px);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(160, 107, 255, 0.15) 0%, rgba(6, 4, 16, 0) 70%);
+  filter: blur(80px);
   z-index: -1;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: pulse 8s infinite alternate;
@@ -25,17 +27,20 @@
 
 @keyframes pulse {
   0% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-  100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+  100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.8; }
 }
 
 .headline {
   font-size: 5rem;
   line-height: 1.1;
+  margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
   letter-spacing: -0.02em;
   background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.5) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 1; /* Ensure text is above background elements */
 }
 
 .subheadline {
@@ -43,11 +48,16 @@
   color: var(--text-secondary);
   max-width: 600px;
   margin-bottom: var(--spacing-lg);
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
 }
 
 .ctaGroup {
   display: flex;
   gap: var(--spacing-md);
+  position: relative;
+  z-index: 1;
 }
 
 .primaryBtn {
@@ -61,6 +71,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  border: none;
 }
 
 .primaryBtn:hover {
@@ -68,18 +79,19 @@
 }
 
 .secondaryBtn {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   color: var(--text-primary);
   padding: 1rem 2rem;
   border-radius: 9999px;
   font-weight: 600;
   font-size: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
 
 .secondaryBtn:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -89,6 +101,7 @@
   .ctaGroup {
     flex-direction: column;
     width: 100%;
+    max-width: 320px;
   }
   .primaryBtn, .secondaryBtn {
     width: 100%;

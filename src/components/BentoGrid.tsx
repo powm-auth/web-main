@@ -1,8 +1,7 @@
 import React from 'react';
 import styles from './BentoGrid.module.css';
-import { GlassCard } from './GlassCard';
-import { Shield, Lock, Scan, Zap, Layers } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { EyeOff, FileKey, Database, ShieldCheck } from 'lucide-react';
 
 const container = {
   hidden: { opacity: 0 },
@@ -15,7 +14,7 @@ const container = {
 };
 
 const item = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0 }
 };
 
@@ -26,64 +25,49 @@ export const BentoGrid: React.FC = () => {
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-50px" }}
     >
-      {/* Large Card: Double Anonymity */}
-      <GlassCard className={styles.largeCard} variants={item}>
+      {/* 1. Double Anonymity (Wide) */}
+      <motion.div className={`${styles.glassCard} ${styles.wideCard}`} variants={item}>
         <div className={styles.iconWrapper}>
-          <Layers />
+          <EyeOff size={24} />
         </div>
-        <h3 className={styles.cardTitle}>Double Anonymity</h3>
+        <h3 className={styles.cardTitle}>Double-Blind Anonymity</h3>
         <p className={styles.cardDesc}>
-          Our proprietary double-blind protocol ensures that neither the issuer nor the verifier can correlate your identity. You remain a ghost in the machine.
+          Our protocol ensures zero correlation between issuer and verifier. 
+          You are the only one who holds the keys to link them.
         </p>
-        <div className={styles.visualAbstract} />
-      </GlassCard>
+        
+        {/* Abstract Visual */}
+        <div className={styles.abstractVisual} style={{ 
+          background: 'radial-gradient(circle at 80% 80%, rgba(160, 107, 255, 0.15), transparent 60%)' 
+        }} />
+      </motion.div>
 
-      {/* Small Card: Local Storage */}
-      <GlassCard className={styles.smallCard} variants={item}>
-        <div className={styles.iconWrapper} style={{ color: 'var(--safety-orange)' }}>
-          <Lock />
-        </div>
-        <h3 className={styles.cardTitle}>Local Storage</h3>
-        <p className={styles.cardDesc}>
-          Your keys, your data. Encrypted locally on your device's Secure Enclave.
-        </p>
-      </GlassCard>
-
-      {/* Tall Card: Zero Knowledge */}
-      <GlassCard className={styles.tallCard} variants={item}>
+      {/* 2. Zero Knowledge (Square) */}
+      <motion.div className={`${styles.glassCard} ${styles.squareCard}`} variants={item}>
         <div className={styles.iconWrapper} style={{ color: 'var(--active-cyan)' }}>
-          <Scan />
+          <ShieldCheck size={24} />
         </div>
-        <h3 className={styles.cardTitle}>Zero Knowledge Proofs</h3>
+        <h3 className={styles.cardTitle}>Zero Knowledge</h3>
         <p className={styles.cardDesc}>
-          Prove you are over 18 without showing your birthdate. Verify citizenship without revealing your address.
+          Prove predicates (e.g., "Over 18") without revealing raw data.
         </p>
-        <div style={{ 
-          marginTop: '2rem', 
-          height: '150px', 
-          background: 'rgba(0,0,0,0.3)', 
-          borderRadius: '8px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          border: '1px dashed rgba(255,255,255,0.2)'
-        }}>
-          <Zap size={48} style={{ opacity: 0.5 }} />
-        </div>
-      </GlassCard>
+      </motion.div>
 
-      {/* Small Card: Instant Sync */}
-      <GlassCard className={styles.smallCard} variants={item}>
-        <div className={styles.iconWrapper}>
-          <Shield />
+      {/* 3. Local Storage (Tall) */}
+      <motion.div className={`${styles.glassCard} ${styles.tallCard}`} variants={item}>
+        <div className={styles.iconWrapper} style={{ color: 'var(--safety-orange)' }}>
+          <Database size={24} />
         </div>
-        <h3 className={styles.cardTitle}>Military Grade</h3>
+        <h3 className={styles.cardTitle}>Local-First Vault</h3>
         <p className={styles.cardDesc}>
-          AES-256 encryption meeting the highest security standards.
+          Your identity data never leaves your device unencrypted. Stored in the Secure Enclave.
         </p>
-      </GlassCard>
+        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.3 }}>
+           <FileKey size={80} />
+        </div>
+      </motion.div>
 
     </motion.div>
   );
