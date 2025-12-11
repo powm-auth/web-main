@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { FeatureDev } from './features/FeatureDev';
 import { FeatureLocal } from './features/FeatureLocal';
 import { FeatureRelay } from './features/FeatureRelay';
-import { FeatureTrust } from './features/FeatureTrust';
+import { FeatureSpeed } from './features/FeatureSpeed';
+import { FeatureWorld } from './features/FeatureWorld'; // Import the new card
 
 const container = {
   hidden: { opacity: 0 },
@@ -30,21 +31,27 @@ export const BentoGrid: React.FC = () => {
       whileInView="show"
       viewport={{ once: true, margin: "-50px" }}
     >
-      <motion.div variants={item}>
+      {/* Left Column */}
+      <motion.div className={styles.leftColItem1} variants={item}>
         <FeatureDev />
       </motion.div>
-
-      <motion.div variants={item}>
+      <motion.div className={styles.leftColItem2} variants={item}>
         <FeatureLocal />
       </motion.div>
 
-      <motion.div variants={item}>
-        <FeatureRelay />
+      {/* Middle Column (Tall World Card) */}
+      <motion.div className={styles.middleColItem} variants={item}>
+         <FeatureWorld />
       </motion.div>
 
-      <motion.div variants={item}>
-        <FeatureTrust />
+      {/* Right Column */}
+      <motion.div className={styles.rightColItem1} variants={item}>
+        <FeatureRelay />
       </motion.div>
+      <motion.div className={styles.rightColItem2} variants={item}>
+        <FeatureSpeed />
+      </motion.div>
+
     </motion.div>
   );
 };

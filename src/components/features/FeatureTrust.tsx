@@ -1,22 +1,11 @@
 import React from 'react';
 import styles from './Features.module.css';
-import { Check, Github, Lock } from 'lucide-react';
+import { Github, Lock } from 'lucide-react';
 
 export const FeatureTrust: React.FC = () => {
   return (
     <div className={styles.featureCard}>
-      <div className={styles.contentWrapper}>
-        <h3 className={styles.title}>Ultra Transparent</h3>
-        <p className={styles.caption}>Don't trust us. Verify us.</p>
-        <p className={styles.description}>
-          Our core verification logic is public on GitHub. No hidden backdoors.
-        </p>
-        <ul className={styles.list}>
-          <li className={styles.listItem}><Check size={16} className={styles.checkIcon}/> Open Source Protocol</li>
-          <li className={styles.listItem}><Check size={16} className={styles.checkIcon}/> GDPR Compliant by Design</li>
-        </ul>
-      </div>
-
+      {/* Visual Top */}
       <div className={styles.visualContainer}>
         <div className={styles.statusCard}>
           <div className={styles.statusRow}>
@@ -61,6 +50,12 @@ export const FeatureTrust: React.FC = () => {
              </button>
           </div>
         </div>
+      </div>
+
+      {/* Content Bottom */}
+      <div className={styles.contentWrapper}>
+        <h3 className={styles.title}>Ultra Transparent</h3>
+        <p className={styles.caption}>Don't trust us. Verify us.</p>
       </div>
     </div>
   );

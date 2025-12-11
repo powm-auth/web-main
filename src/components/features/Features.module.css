@@ -7,7 +7,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto; /* Height fits content */
   transition: all 0.3s ease;
 }
 
@@ -18,10 +18,13 @@
 
 .contentWrapper {
   padding: 2rem;
-  flex: 1;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+  flex: 0 0 auto; /* Stop growing */
   display: flex;
   flex-direction: column;
   z-index: 2;
+  margin-top: auto; /* Push to bottom if space available */
 }
 
 .title {
@@ -35,7 +38,7 @@
 
 .caption {
   font-size: 1rem;
-  color: var(--active-cyan);
+  color: var(--electric-purple);
   margin-bottom: 1rem;
   font-weight: 500;
 }
@@ -71,19 +74,22 @@
 }
 
 .visualContainer {
-  height: 240px;
-  background: rgba(0, 0, 0, 0.2);
-  border-top: 1px solid var(--glass-border);
+  flex: 0 0 auto; /* Do not grow, stick to min-height or content */
+  min-height: 200px;
+  background: transparent; /* Unified background */
+  border: none; /* Remove separator */
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 /* Feature 1: Developer Code */
 .codeWindow {
-  width: 90%;
+  width: 100%; /* Full width */
+  max-width: 90%;
   height: 80%;
   background: #0d0d0d;
   border-radius: 8px;
@@ -95,6 +101,8 @@
   display: flex;
   gap: 1rem;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: space-between;
 }
 
 .codeContent {
@@ -105,15 +113,16 @@
 }
 
 .phoneMini {
-  width: 80px;
-  height: 140px;
-  border: 4px solid #333;
-  border-radius: 12px;
+  width: 60px; /* Slightly smaller to fit better */
+  height: 100px;
+  border: 3px solid #333;
+  border-radius: 8px;
   background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-shrink: 0;
 }
 
 .successFlash {
@@ -157,12 +166,12 @@
   position: absolute;
   width: 120px;
   height: 120px;
-  border: 2px solid var(--active-cyan);
+  border: 2px solid var(--electric-purple);
   border-radius: 50%;
   bottom: 40px;
   left: 20px;
   opacity: 0;
-  box-shadow: 0 0 20px var(--active-cyan);
+  box-shadow: 0 0 20px var(--electric-purple);
 }
 
 .idCard {

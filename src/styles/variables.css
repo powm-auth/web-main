@@ -36,6 +36,6 @@
   --spacing-xl: 8rem;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--active-cyan), var(--electric-purple));
-  --gradient-text: linear-gradient(90deg, #fff, var(--active-cyan));
+  --gradient-primary: linear-gradient(135deg, var(--electric-purple), var(--orangeElectricMain));
+  --gradient-text: linear-gradient(90deg, #fff, var(--electric-purple));
 }

@@ -2,7 +2,6 @@
   position: relative;
   height: 300vh; /* Long scroll area */
   width: 100%;
-  background: var(--bg-main);
 }
 
 .stickyWrapper {
@@ -67,16 +66,10 @@
   background: white;
   border-radius: 16px;
   padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  gap: 5px;
+  display: flex; /* Centering for SVG */
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 0 30px rgba(255,255,255,0.1);
-}
-
-.qrDot {
-  background: black;
-  border-radius: 2px;
 }
 
 /* Scan Line */
@@ -127,7 +120,7 @@
 .yesButton {
   width: 100%;
   padding: 1rem;
-  background: var(--gradient-primary);
+  background: var(--electric-purple);
   border-radius: 12px;
   color: white;
   font-weight: 600;
@@ -149,13 +142,16 @@
 .successWrapper {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 50%; /* Nudged left as requested */
+  right: 50%;
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 30;
+  width: auto;
+  text-align: center;
 }
 
 .checkCircle {

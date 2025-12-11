@@ -33,34 +33,29 @@ export const FeatureDev: React.FC = () => {
 
   return (
     <div className={styles.featureCard} ref={scope}>
+      {/* Visual Top */}
+      <div className={styles.visualContainer} style={{ padding: '0 1rem' }}>
+        <div className={styles.codeWindow}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1 }}>
+             <Code2 size={24} color="#555" />
+             <div className={styles.codeContent}>
+                <span style={{ color: '#cc7832' }}>const</span> result = <br/>
+                <span style={{ color: '#a9b7c6' }}>{text}</span><span className="cursor">|</span>
+             </div>
+          </div>
+          
+          <div className={styles.phoneMini}>
+            <motion.div id="phoneScreen" className={styles.successFlash}>
+              <Check color="white" size={32} strokeWidth={4} />
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Bottom */}
       <div className={styles.contentWrapper}>
         <h3 className={styles.title}>Easy to Implement</h3>
         <p className={styles.caption}>One Webhook. One QR Code. Zero Headaches.</p>
-        <p className={styles.description}>
-          Prove it takes 5 minutes, not 5 weeks. Drop-in SDK for Node, Python, and PHP.
-        </p>
-        <ul className={styles.list}>
-          <li className={styles.listItem}><Check size={16} className={styles.checkIcon}/> Under 2 seconds to verify. Faster than an SMS code.</li>
-          <li className={styles.listItem}><Check size={16} className={styles.checkIcon}/> No database migrations</li>
-        </ul>
-      </div>
-      
-      <div className={styles.visualContainer}>
-        <div className={styles.codeWindow}>
-          <Code2 size={24} color="#555" />
-          <div className={styles.codeContent}>
-            <span style={{ color: '#cc7832' }}>const</span> result = <br/>
-            <span style={{ color: '#a9b7c6' }}>{text}</span><span className="cursor">|</span>
-          </div>
-        </div>
-        
-        <div style={{ width: '2rem' }}></div> {/* Spacer */}
-
-        <div className={styles.phoneMini}>
-          <motion.div id="phoneScreen" className={styles.successFlash}>
-            <Check color="white" size={32} strokeWidth={4} />
-          </motion.div>
-        </div>
       </div>
     </div>
   );

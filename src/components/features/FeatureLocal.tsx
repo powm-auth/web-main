@@ -1,23 +1,12 @@
 import React from 'react';
 import styles from './Features.module.css';
 import { motion } from 'framer-motion';
-import { Check, Smartphone, Shield, Cloud } from 'lucide-react';
+import { Smartphone, Shield, Cloud } from 'lucide-react';
 
 export const FeatureLocal: React.FC = () => {
   return (
     <div className={styles.featureCard}>
-      <div className={styles.contentWrapper}>
-        <h3 className={styles.title}>User First / Local-First</h3>
-        <p className={styles.caption}>Your data stays on your phone.</p>
-        <p className={styles.description}>
-          The Powm App acts like a magnet, pulling your ID into the Secure Enclave.
-        </p>
-        <ul className={styles.list}>
-          <li className={styles.listItem}><Check size={16} className={styles.checkIcon}/> Keys never leave device</li>
-          <li className={styles.listItem}><Check size={16} className={styles.checkIcon}/> Exportable Backup</li>
-        </ul>
-      </div>
-
+      {/* Visual Top */}
       <div className={styles.visualContainer}>
         {/* Cloud Server */}
         <div className={styles.cloudServer}>
@@ -51,7 +40,7 @@ export const FeatureLocal: React.FC = () => {
           animate={{ opacity: [0, 0, 1, 1, 0] }}
           transition={{ duration: 3, repeat: Infinity, times: [0, 0.6, 0.7, 0.9, 1] }}
         >
-             <Shield size={120} color="var(--active-cyan)" strokeWidth={1} style={{ opacity: 0.3 }} />
+             <Shield size={120} color="var(--electric-purple)" strokeWidth={1} style={{ opacity: 0.3 }} />
         </motion.div>
 
         {/* Phone */}
@@ -60,6 +49,12 @@ export const FeatureLocal: React.FC = () => {
              <Smartphone color="var(--electric-purple)" size={32} />
            </div>
         </div>
+      </div>
+
+      {/* Content Bottom */}
+      <div className={styles.contentWrapper}>
+        <h3 className={styles.title}>User First / Local-First</h3>
+        <p className={styles.caption}>Your data stays on your phone.</p>
       </div>
     </div>
   );

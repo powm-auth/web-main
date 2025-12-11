@@ -3,6 +3,8 @@ import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { BentoGrid } from './components/BentoGrid';
 import { PhoneDemo } from './components/PhoneDemo';
+import { ScreenshotCarousel } from './components/ScreenshotCarousel';
+import { Footer } from './components/Footer';
 import { GrainyBackground } from './components/GrainyBackground';
 import { useScroll, useTransform } from 'framer-motion';
 
@@ -21,7 +23,7 @@ const App: React.FC = () => {
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
 
   return (
-    <div style={{ minHeight: '100vh', paddingBottom: '4rem' }}>
+    <div style={{ minHeight: '100vh' }}>
       <GrainyBackground overlayOpacity={overlayOpacity} />
       <Navbar />
       <main>
@@ -51,7 +53,10 @@ const App: React.FC = () => {
           </h2>
           <PhoneDemo />
         </div>
+
+        <ScreenshotCarousel />
       </main>
+      <Footer />
     </div>
   );
 };
