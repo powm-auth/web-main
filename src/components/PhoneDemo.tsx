@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
 import styles from './PhoneDemo.module.css';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import { Check, MousePointer2, QrCode } from 'lucide-react';
+import { Check, MousePointer2 } from 'lucide-react'; // Remove QrCode import
+import qrcodeImage from '../assets/qrcode.png'; // Import the image
 
 export const PhoneDemo: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,6 +31,9 @@ export const PhoneDemo: React.FC = () => {
   const qrOpacity = useTransform(smoothProgress, [0.25, 0.3], [1, 0]);
   const qrScale = useTransform(smoothProgress, [0.25, 0.3], [1, 0.8]);
 
+  // Title Opacity (Fade In -> Stay -> Fade Out)
+  const titleOpacity = useTransform(smoothProgress, [0, 0.1, 0.8, 0.9], [0, 1, 1, 0]);
+
   // 3. Modal (0.3 -> 0.4 Enter, 0.5 -> 0.55 Exit)
   const modalY = useTransform(smoothProgress, [0.3, 0.4, 0.5, 0.55], ["100%", "0%", "0%", "100%"]);
   
@@ -47,6 +51,17 @@ export const PhoneDemo: React.FC = () => {
   return (
     <div ref={containerRef} className={styles.container}>
       <div className={styles.stickyWrapper}>
+        <motion.h2 style={{ 
+            textAlign: 'center', 
+            fontSize: '2.5rem', 
+            marginBottom: '3rem', // Increased margin to push phone down
+            opacity: titleOpacity,
+            width: '100%',
+            zIndex: 10
+          }}>
+            How it works
+        </motion.h2>
+
         <div className={styles.phone}>
           <div className={styles.screen}>
             
@@ -61,7 +76,7 @@ export const PhoneDemo: React.FC = () => {
               className={styles.qrCode}
               style={{ opacity: qrOpacity, scale: qrScale }}
             >
-              <QrCode size={180} color="black" />
+              <img src={qrcodeImage} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
             </motion.div>
 
             {/* Modal */}
@@ -100,7 +115,7 @@ export const PhoneDemo: React.FC = () => {
               <div className={styles.checkCircle}>
                 <Check size={64} color="white" strokeWidth={3} />
               </div>
-              <h2 style={{ marginTop: '1rem', fontWeight: 800 }}>VERIFIED</h2>
+              <h2 style={{ marginTop: '1rem', fontWeight: 800 }}>Verified</h2>
             </motion.div>
 
           </div>

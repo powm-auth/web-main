@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.brandColumn}>
-            <span className={styles.logoText}>POWM</span>
+            <span className={styles.logoText}>Powm</span>
             <p className={styles.description}>
               Restoring privacy to the internet, one verification at a time. 
               Secure, fast, and user-centric identity solutions.
@@ -62,7 +62,7 @@ export const Footer: React.FC = () => {
 
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} POWM Inc. All rights reserved.
+            © {new Date().getFullYear()} Powm Inc. All rights reserved.
           </p>
           <div className={styles.socials} style={{ fontSize: '0.85rem' }}>
              {/* Reusing socials style for bottom links if needed, or just regular links */}

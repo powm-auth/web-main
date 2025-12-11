@@ -33,7 +33,7 @@ export const BentoGrid: React.FC = () => {
     >
       {/* Left Column */}
       <motion.div className={styles.leftColItem1} variants={item}>
-        <FeatureDev />
+        <FeatureSpeed />
       </motion.div>
       <motion.div className={styles.leftColItem2} variants={item}>
         <FeatureLocal />
@@ -49,7 +49,7 @@ export const BentoGrid: React.FC = () => {
         <FeatureRelay />
       </motion.div>
       <motion.div className={styles.rightColItem2} variants={item}>
-        <FeatureSpeed />
+        <FeatureDev />
       </motion.div>
 
     </motion.div>

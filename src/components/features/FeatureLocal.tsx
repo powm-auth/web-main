@@ -1,58 +1,63 @@
 import React from 'react';
 import styles from './Features.module.css';
 import { motion } from 'framer-motion';
-import { Smartphone, Shield, Cloud } from 'lucide-react';
+import { Lock } from 'lucide-react';
 
 export const FeatureLocal: React.FC = () => {
   return (
-    <div className={styles.featureCard}>
-      {/* Visual Top */}
-      <div className={styles.visualContainer}>
-        {/* Cloud Server */}
-        <div className={styles.cloudServer}>
-          <Cloud size={24} color="rgba(255,255,255,0.5)" />
+    <div className={styles.featureCard} style={{ overflow: 'hidden', position: 'relative' }}>
+        
+        {/* SVG Background */}
+        <div style={{ position: 'absolute', top: '-0px', right: '-0px', zIndex: 0, opacity: 1 }}>
+            <svg width="200" height="200" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M141.48 135.642C142.186 136.4 142.735 137.291 143.094 138.263C143.453 139.234 143.615 140.267 143.572 141.302C143.529 142.337 143.281 143.354 142.842 144.292C142.403 145.23 141.782 146.072 141.016 146.769C140.249 147.466 139.352 148.003 138.376 148.351C137.4 148.698 136.365 148.848 135.33 148.793C134.296 148.737 133.283 148.476 132.35 148.026C131.417 147.576 130.582 146.946 129.895 146.171L96.4034 109.333C90.7366 107.198 84.6282 106.503 78.6267 107.311C72.6251 108.12 66.9182 110.406 62.0184 113.964C60.3402 115.188 58.2448 115.694 56.1932 115.372C54.1416 115.051 52.3018 113.927 51.0786 112.249C49.8554 110.571 49.349 108.475 49.6707 106.424C49.9925 104.372 51.116 102.532 52.7942 101.309C60.7803 95.4765 70.27 92.0537 80.1405 91.4455L67.5242 77.5637C57.9951 79.8796 49.0801 84.2303 41.3913 90.317C39.7604 91.5634 37.7053 92.1193 35.6685 91.8651C33.6317 91.6109 31.7762 90.5669 30.5017 88.9579C29.2272 87.349 28.6356 85.3038 28.8544 83.2629C29.0732 81.222 30.0848 79.3487 31.6714 78.0464C38.9378 72.298 47.1072 67.7944 55.8472 64.719L44.5551 52.3245C35.9284 56.0064 27.8712 60.9005 20.6272 66.8587C19.0199 68.1762 16.9551 68.8012 14.8869 68.5963C12.8188 68.3914 10.9168 67.3733 9.5993 65.766C8.28181 64.1588 7.65678 62.0939 7.86169 60.0258C8.06661 57.9577 9.08469 56.0557 10.692 54.7382C17.6979 48.985 25.3622 44.0842 33.524 40.1387L25.5198 31.3582C24.8139 30.6 24.2656 29.7092 23.9066 28.7375C23.5475 27.7658 23.3849 26.7325 23.4281 25.6975C23.4714 24.6625 23.7196 23.6464 24.1585 22.708C24.5973 21.7697 25.218 20.9278 25.9847 20.2311C26.7513 19.5344 27.6486 18.9968 28.6245 18.6494C29.6004 18.302 30.6356 18.1518 31.67 18.2075C32.7044 18.2631 33.7175 18.5235 34.6505 18.9736C35.5835 19.4236 36.4179 20.0544 37.1054 20.8293L141.48 135.642ZM83.5001 122.641C81.4357 122.641 79.4177 123.253 77.7013 124.4C75.9849 125.547 74.6471 127.177 73.8571 129.084C73.0671 130.991 72.8604 133.09 73.2631 135.114C73.6659 137.139 74.6599 138.999 76.1196 140.459C77.5794 141.918 79.4391 142.912 81.4638 143.315C83.4885 143.718 85.5871 143.511 87.4943 142.721C89.4015 141.931 91.0317 140.593 92.1785 138.877C93.3254 137.16 93.9376 135.142 93.9376 133.078C93.9376 130.31 92.8379 127.655 90.8805 125.698C88.9231 123.74 86.2683 122.641 83.5001 122.641ZM125.609 90.317C127.24 91.5634 129.295 92.1193 131.332 91.8651C133.368 91.6109 135.224 90.5669 136.498 88.9579C137.773 87.349 138.365 85.3038 138.146 83.2629C137.927 81.222 136.915 79.3487 135.329 78.0464C128.001 72.2241 119.741 67.6829 110.899 64.6147C108.947 63.9703 106.82 64.1194 104.977 65.0299C103.134 65.9404 101.723 67.5391 101.049 69.4809C100.375 71.4227 100.492 73.5516 101.374 75.4081C102.256 77.2646 103.833 78.6996 105.765 79.4033C112.946 81.8993 119.655 85.589 125.609 90.317ZM156.308 54.7382C135.77 37.9184 110.047 28.72 83.5001 28.7031C80.9298 28.7031 78.327 28.7879 75.7633 28.9575C74.7353 29.0256 73.7307 29.2956 72.8071 29.7519C71.8834 30.2082 71.0586 30.842 70.3798 31.6171C69.7011 32.3921 69.1817 33.2933 68.8512 34.2691C68.5207 35.2449 68.3857 36.2763 68.4538 37.3043C68.5219 38.3323 68.7918 39.3368 69.2481 40.2605C69.7044 41.1842 70.3382 42.0089 71.1133 42.6877C71.8884 43.3665 72.7895 43.8859 73.7653 44.2164C74.7411 44.5469 75.7725 44.6819 76.8005 44.6138C79.0185 44.4637 81.2756 44.392 83.5001 44.392C106.424 44.4043 128.638 52.3467 146.373 66.8718C147.168 67.5241 148.083 68.0136 149.067 68.3122C150.05 68.6108 151.083 68.7128 152.106 68.6122C153.129 68.5117 154.123 68.2106 155.029 67.7262C155.936 67.2417 156.739 66.5834 157.391 65.7889C158.043 64.9943 158.533 64.079 158.832 63.0953C159.13 62.1116 159.232 61.0787 159.132 60.0555C159.031 59.0324 158.73 58.0391 158.245 57.1324C157.761 56.2256 157.103 55.4231 156.308 54.7708V54.7382Z" stroke="url(#paint0_radial_18_205)" stroke-width="4" mask="url(#path-1-inside-1_18_205)"></path>
+                <defs>
+                <radialGradient id="paint0_radial_18_205" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(83.5001 83.5001) rotate(90) scale(115.823)">
+                <stop stop-color="#3D3B4C"/>
+                <stop offset="1" stop-color="#3D3B4C" stop-opacity="0"/>
+                </radialGradient>
+                </defs>
+            </svg>
         </div>
 
-        {/* The "Vacuum" Effect ID Card */}
-        <motion.div 
-          className={styles.idCard}
-          initial={{ top: '45px', right: '50px', opacity: 1, scale: 1 }}
-          animate={{ 
-            top: ['45px', '140px'], // Move down
-            right: ['50px', '220px'], // Move left to phone
-            scale: [1, 0.5],
-            opacity: [1, 0]
+      {/* Visual Top */}
+      <div className={styles.visualContainer} style={{ zIndex: 1 }}>
+        {/* Pulsating Background */}
+        <motion.div
+          style={{
+            position: 'absolute',
+            width: '120px',
+            height: '120px',
+            borderRadius: '50%',
+            background: 'var(--electric-purple)',
+            opacity: 0.2,
+            filter: 'blur(20px)',
+            zIndex: -1,
+            top: '40%',
+            left: '34%',
+            transform: 'translate(-50%, -50%)',
           }}
-          transition={{ 
-            duration: 2, 
-            repeat: Infinity, 
-            repeatDelay: 1, 
-            ease: "easeInOut" 
+          animate={{
+            scale: [0.8, 1.2, 0.8],
+            opacity: [0.1, 0.3, 0.1],
           }}
-        >
-          <div style={{ width: '100%', height: '4px', background: '#333', marginTop: '4px', borderRadius: '2px' }}/>
-          <div style={{ width: '60%', height: '4px', background: '#333', marginTop: '2px', borderRadius: '2px' }}/>
-        </motion.div>
-
-        {/* Shield Effect */}
-        <motion.div 
-          className={styles.shield}
-          animate={{ opacity: [0, 0, 1, 1, 0] }}
-          transition={{ duration: 3, repeat: Infinity, times: [0, 0.6, 0.7, 0.9, 1] }}
-        >
-             <Shield size={120} color="var(--electric-purple)" strokeWidth={1} style={{ opacity: 0.3 }} />
-        </motion.div>
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
 
         {/* Phone */}
-        <div className={styles.phoneVault}>
+        <div className={styles.phoneVault} style={{ position: 'relative', top: 'auto', left: 'auto', bottom: 'auto', transform: 'none' }}>
            <div style={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-             <Smartphone color="var(--electric-purple)" size={32} />
+             <Lock color="var(--electric-purple)" size={32} />
            </div>
         </div>
       </div>
 
       {/* Content Bottom */}
-      <div className={styles.contentWrapper}>
+      <div className={styles.contentWrapper} style={{ zIndex: 1 }}>
         <h3 className={styles.title}>User First / Local-First</h3>
         <p className={styles.caption}>Your data stays on your phone.</p>
       </div>

@@ -1,58 +1,59 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Features.module.css';
-import { motion, useAnimate } from 'framer-motion';
-import { Check, Code2 } from 'lucide-react';
+import { useAnimate } from 'framer-motion';
+import { Code2, CheckCircle2 } from 'lucide-react';
 
 export const FeatureDev: React.FC = () => {
-  const [scope, animate] = useAnimate();
+  const [scope] = useAnimate();
   const [text, setText] = useState("");
-  const codeString = "await powm.verify(token);";
+  const [showSuccess, setShowSuccess] = useState(false);
+  const codeString = "await powm.challenge(token)";
 
   useEffect(() => {
     const sequence = async () => {
       while(true) {
-        // Reset
         setText("");
-        await animate("#phoneScreen", { opacity: 0 }, { duration: 0 });
+        setShowSuccess(false);
+        await new Promise(r => setTimeout(r, 500));
         
-        // Typewriter
         for (let i = 0; i <= codeString.length; i++) {
           setText(codeString.slice(0, i));
-          await new Promise(r => setTimeout(r, 50)); // Typing speed
+          await new Promise(r => setTimeout(r, 50));
         }
         
-        await new Promise(r => setTimeout(r, 200));
-
-        // Flash Success
-        await animate("#phoneScreen", { opacity: 1 }, { duration: 0.1 });
-        await new Promise(r => setTimeout(r, 2000)); // Hold success
+        await new Promise(r => setTimeout(r, 400));
+        setShowSuccess(true);
+        
+        await new Promise(r => setTimeout(r, 3000));
       }
     };
     sequence();
-  }, [animate]);
+  }, []);
 
   return (
     <div className={styles.featureCard} ref={scope}>
-      {/* Visual Top */}
       <div className={styles.visualContainer} style={{ padding: '0 1rem' }}>
-        <div className={styles.codeWindow}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flex: 1 }}>
-             <Code2 size={24} color="#555" />
-             <div className={styles.codeContent}>
-                <span style={{ color: '#cc7832' }}>const</span> result = <br/>
-                <span style={{ color: '#a9b7c6' }}>{text}</span><span className="cursor">|</span>
+        <div className={styles.codeWindow} style={{ flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', gap: '0.75rem' }}>
+          
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', width: '100%' }}>
+             <Code2 size={20} color="#555" />
+             <div style={{ fontFamily: 'monospace', fontSize: '0.95rem', color: '#a9b7c6' }}>
+               {text}
              </div>
           </div>
-          
-          <div className={styles.phoneMini}>
-            <motion.div id="phoneScreen" className={styles.successFlash}>
-              <Check color="white" size={32} strokeWidth={4} />
-            </motion.div>
-          </div>
+
+           <div style={{ paddingLeft: '2.5rem', height: '24px', display: 'flex', alignItems: 'center' }}>
+              {showSuccess && (
+                <div className={styles.successBadge}>
+                  <CheckCircle2 size={14} />
+                  <span>Completed</span>
+                </div>
+              )}
+           </div>
+
         </div>
       </div>
 
-      {/* Content Bottom */}
       <div className={styles.contentWrapper}>
         <h3 className={styles.title}>Easy to Implement</h3>
         <p className={styles.caption}>One Webhook. One QR Code. Zero Headaches.</p>

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import styles from './ScreenshotCarousel.module.css';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ShieldCheck, Zap, Globe, Lock } from 'lucide-react';
+import bgImage from '../assets/2ndbackground.png';
 
 const cards = [
   {
@@ -59,19 +60,54 @@ export const ScreenshotCarousel: React.FC = () => {
     return () => window.removeEventListener('resize', updateScrollDistance);
   }, []);
 
-  // Track scroll progress of the container
+  // Track scroll progress of the container for horizontal movement
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
+  });
+
+  // Track scroll progress for background entry transition
+  const { scrollYProgress: enterProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "start start"]
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["0px", targetX]);
   const opacity = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
   const scale = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [0.8, 1, 1, 0.8]);
 
+  // Background fades in as the section enters the viewport
+  const bgOpacity = useTransform(enterProgress, [0, 1], [0, 1]);
+
   return (
     <div ref={containerRef} className={styles.container}>
       <div className={styles.stickyWrapper}>
+        <motion.div 
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 70%', // Shifted downwards by 20% from center (50% + 20% = 70%)
+            opacity: bgOpacity,
+            zIndex: -1
+          }}
+        />
+        {/* Transition Gradient from previous section */}
+        <div 
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '20vh', // Adjust height for smoothness
+            background: 'linear-gradient(to bottom, black 0%, transparent 100%)',
+            zIndex: 0 // Above background image
+          }} 
+        />
         <div className={styles.topGradientOverlay} />
         <div className={styles.bottomGradientOverlay} />
         <motion.div 

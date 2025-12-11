@@ -44,13 +44,6 @@ const App: React.FC = () => {
         </div>
 
         <div style={{ margin: '4rem 0' }}>
-           <h2 style={{ 
-            textAlign: 'center', 
-            fontSize: '2.5rem', 
-            marginBottom: '1rem',
-          }}>
-            How it works
-          </h2>
           <PhoneDemo />
         </div>
 

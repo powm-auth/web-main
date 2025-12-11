@@ -104,7 +104,7 @@ export const FeatureSpeed: React.FC = () => {
       {/* Content Bottom */}
       <div className={styles.contentWrapper}>
         <h3 className={styles.title}>Lightning Fast</h3>
-        <p className={styles.caption}>Under 2 seconds.</p>
+        <p className={styles.caption}>Check in 2 clicks.</p>
       </div>
     </div>
   );

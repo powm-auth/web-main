@@ -47,7 +47,7 @@
   padding-right: 0;
   margin-top: 20rem;
   width: max-content;
-  box-shadow: inset 0px 10px 10px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 10px -5px rgba(0, 0, 0, 0.3);
 }
 
 .bottomGradientOverlay {
