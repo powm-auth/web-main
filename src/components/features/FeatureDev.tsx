@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import styles from './Features.module.css';
 import { useAnimate } from 'framer-motion';
 import { Code2, CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const FeatureDev: React.FC = () => {
+  const { t } = useTranslation();
   const [scope] = useAnimate();
   const [text, setText] = useState("");
   const [showSuccess, setShowSuccess] = useState(false);
@@ -46,7 +48,7 @@ export const FeatureDev: React.FC = () => {
               {showSuccess && (
                 <div className={styles.successBadge}>
                   <CheckCircle2 size={14} />
-                  <span>Completed</span>
+                  <span>{t('features.dev.completed')}</span>
                 </div>
               )}
            </div>
@@ -55,8 +57,8 @@ export const FeatureDev: React.FC = () => {
       </div>
 
       <div className={styles.contentWrapper}>
-        <h3 className={styles.title}>Easy to Implement</h3>
-        <p className={styles.caption}>One Webhook. One QR Code. Zero Headaches.</p>
+        <h3 className={styles.title}>{t('features.dev.title')}</h3>
+        <p className={styles.caption}>{t('features.dev.caption')}</p>
       </div>
     </div>
   );

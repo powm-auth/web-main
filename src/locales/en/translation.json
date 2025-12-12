@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "documentation": "Documentation",
+    "forBusiness": "For Business",
+    "getApp": "Get App"
+  },
+  "hero": {
+    "headline": "Prove the age.\nNot the identity.",
+    "subheadline": "Fast private proofs without revealing everything. The first double-blind identity wallet for the digital age thinked for users.",
+    "downloadIOS": "Download for iOS",
+    "readWhitepaper": "Read Whitepaper"
+  },
+  "sections": {
+    "privacyBack": "Privacy is back on internet"
+  },
+  "phoneDemo": {
+    "title": "How it works",
+    "modalTitle": "Validate Identity?",
+    "modalText": "website.com wants to verify you are over 18.",
+    "approve": "Approve Request",
+    "verified": "Verified"
+  },
+  "carousel": {
+    "title": "Experience the Future",
+    "subtitle": "A seamless interface designed for privacy, speed, and ease of use.",
+    "appTitle": "POWM App",
+    "cards": {
+      "screenshot1_alt": "Screenshot of application home screen",
+      "screenshot2_alt": "Screenshot of identity verification process",
+      "screenshot3_alt": "Screenshot of application settings",
+      "screenshot4_alt": "Screenshot of transaction history"
+    }
+  },
+  "features": {
+    "speed": {
+      "title": "Lightning Fast",
+      "caption": "Check in 2 clicks.",
+      "verified": "VERIFIED"
+    },
+    "dev": {
+        "title": "Easy to Implement",
+        "caption": "One Webhook. One QR Code. Zero Headaches.",
+        "completed": "Completed"
+    },
+    "local": {
+        "title": "User First / Local-First",
+        "caption": "Your data stays on your phone."
+    },
+    "relay": {
+        "title": "Double-Blind Relay",
+        "caption": "We don't know where you go.",
+        "user": "Utilisateur",
+        "merchant": "Marchand"
+    },
+    "trust": {
+        "title": "Ultra Transparent",
+        "caption": "Don't trust us. Verify us.",
+        "operational": "Systems Operational",
+        "online": "ONLINE",
+        "audit": "Latest Audit:",
+        "auditStatus": "Passed (Dec 2025)",
+        "source": "Source",
+        "security": "Security"
+    },
+    "world": {
+        "title": "Global Scale",
+        "caption": "Works everywhere."
+    }
+  },
+  "footer": {
+    "description": "Restoring privacy to the internet, one verification at a time. Secure, fast, and user-centric identity solutions.",
+    "product": "Product",
+    "resources": "Resources",
+    "company": "Company",
+    "links": {
+        "features": "Features",
+        "integrations": "Integrations",
+        "pricing": "Pricing",
+        "changelog": "Changelog",
+        "documentation": "Documentation",
+        "apiReference": "API Reference",
+        "community": "Community",
+        "helpCenter": "Help Center",
+        "about": "About",
+        "blog": "Blog",
+        "careers": "Careers",
+        "contact": "Contact",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+    },
+    "rights": "© {{year}} Powm Inc. All rights reserved."
+  },
+  "legal": {
+    "privacy": {
+      "title": "DOCUMENT 1: PRIVACY POLICY",
+      "effectiveDate": "EFFECTIVE DATE: December 12, 2025",
+      "sections": [
+        {
+          "title": "1. THE \"ANTI-COLLECTION\" PLEDGE",
+          "content": "Unlike traditional identity providers, Powm is designed to know nothing about you. We have architected our system so that we technically cannot access your personal data, even if we wanted to."
+        },
+        {
+          "title": "2. WHAT WE DO NOT COLLECT",
+          "content": "To be absolutely clear, when you use the Powm App or verify your age:\n\nNO Personal Identity Information (PII): We do not collect your name, date of birth, address, phone number, or government ID scans.\n\nNO IP Addresses: We do not log or store your IP address.\n\nNO Browser Fingerprints: We do not collect data about your browser, screen size, or battery level to track you.\n\nNO Usage History: We do not know which websites you visit. We only process a cryptographic \"Yes/No\" signal."
+        },
+        {
+          "title": "3. WHAT WE DO STORE (AND WHY)",
+          "content": "We store only one piece of data to make the service function:\n\nDevice Identifier (Security Key):\n\nWhat it is: A unique, random cryptographic ID generated on your mobile device.\n\nWhy we need it: This allows your specific phone to \"sign\" a proof of age without revealing who you are. It ensures that a proof cannot be faked or replayed by hackers.\n\nCan it identify you? No. It is not linked to your email, phone number, or Apple/Google account. It is just a random string of numbers linked to this specific installation of the app."
+        },
+        {
+          "title": "4. LOCAL-FIRST STORAGE",
+          "content": "Your Identity Wallet (including your age attestation) is stored locally on your device.\n\nIt is encrypted in your phone’s Secure Enclave.\n\nPowm’s servers do not hold the decryption keys.\n\nIf you delete the app without a backup, your data is gone forever. We cannot restore it because we never had it."
+        },
+        {
+          "title": "5. DATA RETENTION",
+          "content": "Verification Logs: When you prove your age, we generate a temporary technical log (Success/Fail timestamp). This log contains no destination URL and no user identity.\n\nDeletion: These technical logs are automatically purged every 30 days."
+        }
+      ]
+    },
+    "terms": {
+      "title": "DOCUMENT 2: TERMS OF SERVICE (ToS)",
+      "lastUpdated": "LAST UPDATED: December 12, 2025",
+      "sections": [
+        {
+          "title": "1. ACCEPTANCE OF TERMS",
+          "content": "By downloading or using Powm (\"The Service\"), you agree to these terms. If you do not agree, delete the app immediately."
+        },
+        {
+          "title": "2. THE SERVICE",
+          "content": "Powm is a technical tool that allows you to hold and present digital proofs (e.g., \"Over 18\").\n\nNo Warranty: We provide the service \"as is.\" We do not guarantee that every merchant or website will accept Powm proofs.\n\nNot a Government ID: Powm is not a replacement for your physical passport or driver’s license in legal or government settings."
+        },
+        {
+          "title": "3. USER RESPONSIBILITY (YOUR DEVICE, YOUR LIABILITY)",
+          "content": "Because Powm is a Local-First wallet, you are the sole custodian of your data.\n\nSecurity: You are responsible for securing your phone (PIN, Biometrics). If someone steals your unlocked phone and uses it to verify age, Powm is not liable.\n\nLoss of Data: If you lose your device or delete the app, your credentials are lost. Powm cannot recover them for you."
+        },
+        {
+          "title": "4. PROHIBITED USE",
+          "content": "You agree not to use Powm for:\n\nVerifying age to access illegal content (e.g., CSAM, terrorism).\n\nAttempting to reverse-engineer the cryptographic protocols.\n\nUsing a rooted/jailbroken device to spoof verifications.\n\nResult: We reserve the right to ban your Device Identifier if we detect cryptographic tampering or bot-like activity."
+        },
+        {
+          "title": "5. LIMITATION OF LIABILITY",
+          "content": "To the maximum extent permitted by law, Powm shall not be liable for any indirect, incidental, or consequential damages arising from your use of the service.\n\nWe are not responsible for the content, privacy practices, or safety of the Third-Party Websites you access using Powm. We only open the door; we do not control what is inside."
+        },
+        {
+          "title": "6. GOVERNING LAW",
+          "content": "These terms are governed by the laws of France. Any disputes shall be resolved in the courts of Paris."
+        }
+      ]
+    },
+    "whitepaper": {
+      "title": "Identity without surveillance",
+      "subtitle": "The Powm Standard for a Privacy-First Web",
+      "version": "Version: 1.0 (Vision Paper)",
+      "date": "Date: December 2025",
+      "sections": [
+        {
+          "title": "1. Executive summary",
+          "content": "The internet was built on a promise of freedom, the power to explore, learn, and connect without being watched. However, the anonymity that fueled the web’s growth has created dangerous blind spots. We collectively recognize that children must be protected from unsuitable content, and that digital spaces require accountability to function safely.\n\nThe current industry response to these challenges is to swing to the extreme of Total Surveillance. To comply with new safety regulations (such as AVMSD and ARCOM requirements), websites are forcing users to upload sensitive identity documents, effectively creating a \"digital checkpoint\" at every URL. This approach solves one safety problem by creating a massive privacy disaster: the \"Data Over-Transmission\" crisis.\n\nPowm proposes a third path. We refuse to accept that safety requires the surrender of privacy. We are building the infrastructure for Proof without Exposure, a neutral, double-blind identity layer that allows users to prove their eligibility (e.g., \"Over 18\") without revealing who they are."
+        },
+        {
+          "title": "2. The privacy paradox",
+          "level": 2,
+          "content": ""
+        },
+        {
+          "title": "2.1. The \"False Choice\"",
+          "level": 3,
+          "content": "Today, regulators and citizens are presented with a false dichotomy:\n\n1. The Wild West: An anonymous internet where children are exposed to harm and illegal activity goes unchecked.\n2. The Surveillance State: A \"safe\" internet where every access requires a scan of a government ID, creating permanent logs of user behavior."
+        },
+        {
+          "title": "2.2. The Honeypot Risk",
+          "level": 3,
+          "content": "Current age-verification solutions rely on centralized databases. Users are asked to upload passports or credit cards to verify their age. This creates massive \"honeypots\", centralized servers holding millions of sensitive records. When these databases are inevitably breached, the damage to the user is catastrophic and irreversible.\n\nFurthermore, this model creates a Surveillance Economy. If a user must identify themselves to access adult content or gambling sites, that verification event becomes a data point. This sensitive data, who visited what, is often monetized or leaked, fundamentally violating the user's right to privacy."
+        },
+        {
+          "title": "3. The Powm Solution: Proof Without Exposure",
+          "level": 2,
+          "content": "We are not blind to the realities of online safety. We agree that certain digital doors should be locked to minors. However, the key to those doors should not be a dossier of personal information.\n\nPowm introduces a paradigm of Data Minimalism based on three core principles:"
+        },
+        {
+          "title": "3.1. The Local-First Vault",
+          "level": 3,
+          "content": "We believe that identity belongs to the individual, not the platform. In the Powm architecture, the user’s identity attributes (such as an age attestation) are stored locally on their device’s secure hardware.\n\n- The Difference: Instead of the cloud holding your ID, your phone holds a cryptographic \"permit.\"\n- The Benefit: A hacker cannot steal what we do not hold."
+        },
+        {
+          "title": "3.2. Decoupling Identity from Activity",
+          "level": 3,
+          "content": "Current systems link Who You Are with What You Do. Powm mathematically separates these two data points.\nWe utilize a Double-Blind architecture:\n\n- The Issuer (who checks the ID) knows the user, but never sees which websites they visit.\n- The Verifier (the website) sees that the user is \"Over 18,\" but never sees the user's name or IP address.\n- The Result: Compliance is achieved, but the trail is broken."
+        },
+        {
+          "title": "3.3. Zero-Knowledge Logic",
+          "level": 3,
+          "content": "We replace \"Data Transfer\" with \"Cryptographic Proof.\\nWhen a user visits a restricted site, Powm does not send a date of birth (e.g., \"15/05/1990\"). Instead, the protocol generates a single-use cryptographic token that answers a specific question: \"Is this user > 18?\"\nThe answer is a verified YES or NO. No other data leaves the device."
+        },
+        {
+          "title": "4. The case for a neutral utility",
+          "level": 2,
+          "content": "As the demand for digital identity grows, society faces a critical question: Who should hold the keys?\n\n- Big Tech? If we rely on social login (e.g., \"Login with...\"), our identity becomes just another signal for ad targeting.\n- Governments? State-run login systems risk creating an infrastructure for mass surveillance.\n\nPowm positions itself as a Neutral External Utility.\n\n- No Ad Network: We do not monetize user data. Our business model is based on the service of verification itself (a utility model), aligning our incentives with privacy.\n- No Political Agenda: We are a technical intermediary, ensuring the law is respected without expanding the scope of control.\n\nWe believe that by being an independent third party, one that legally and technically cannot see the data, we offer the only viable path to mass adoption. Users will not trust a porn site with their ID. They will not trust a data broker. They need a neutral shield."
+        },
+        {
+          "title": "5. Conclusion",
+          "level": 2,
+          "content": "The world is ready for digital identity, but it is rejecting the \"surveillance\" model of the past decade.\nWe are building Powm to prove that Privacy and Safety are not enemies. They are partners.\n\nBy leveraging modern cryptography, we can enforce the laws of the physical world, protecting children and reducing fraud, while preserving the spirit of the digital world: the freedom to be private.\n\nPowm: Prove the Age. Not the Identity."
+        }
+      ]
+    }
+  }
+}

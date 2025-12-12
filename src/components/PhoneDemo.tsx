@@ -3,8 +3,10 @@ import styles from './PhoneDemo.module.css';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { Check, MousePointer2 } from 'lucide-react'; // Remove QrCode import
 import qrcodeImage from '../assets/qrcode.png'; // Import the image
+import { useTranslation } from 'react-i18next';
 
 export const PhoneDemo: React.FC = () => {
+  const { t } = useTranslation();
   const containerRef = useRef<HTMLDivElement>(null);
   
   // Track scroll progress relative to this component's container
@@ -59,7 +61,7 @@ export const PhoneDemo: React.FC = () => {
             width: '100%',
             zIndex: 10
           }}>
-            How it works
+            {t('phoneDemo.title')}
         </motion.h2>
 
         <div className={styles.phone}>
@@ -86,11 +88,11 @@ export const PhoneDemo: React.FC = () => {
             >
               <div style={{ width: '40px', height: '4px', background: 'rgba(255,255,255,0.2)', borderRadius: '2px' }} />
               <div>
-                <h3 className={styles.modalTitle}>Validate Identity?</h3>
-                <p className={styles.modalText}>website.com wants to verify you are over 18.</p>
+                <h3 className={styles.modalTitle}>{t('phoneDemo.modalTitle')}</h3>
+                <p className={styles.modalText}>{t('phoneDemo.modalText')}</p>
               </div>
               <button className={styles.yesButton}>
-                Approve Request
+                {t('phoneDemo.approve')}
               </button>
 
               {/* Cursor moving relative to the modal for easier positioning */}
@@ -113,9 +115,9 @@ export const PhoneDemo: React.FC = () => {
               style={{ scale: successScale, opacity: successOpacity }}
             >
               <div className={styles.checkCircle}>
-                <Check size={64} color="white" strokeWidth={3} />
+                <Check size={48} color="white" strokeWidth={3} />
               </div>
-              <h2 style={{ marginTop: '1rem', fontWeight: 800 }}>Verified</h2>
+              <h2 style={{ marginTop: '1rem', fontWeight: 800 }}>{t('phoneDemo.verified')}</h2>
             </motion.div>
 
           </div>

@@ -19,16 +19,16 @@
 
 /* Phone Bezel */
 .phone {
-  width: 320px;
-  height: 640px;
-  border: 12px solid #1a1a1a;
-  border-radius: 48px;
+  width: 240px; /* Reduced from 320px */
+  height: 480px; /* Reduced from 640px */
+  border: 9px solid #1a1a1a; /* Adjusted border */
+  border-radius: 36px; /* Adjusted border-radius */
   background: #000;
   position: relative;
   box-shadow: 
     0 0 0 2px #333,
-    0 20px 50px rgba(0,0,0,0.5),
-    0 0 100px rgba(160, 107, 255, 0.1);
+    0 15px 40px rgba(0,0,0,0.5), /* Adjusted shadow */
+    0 0 75px rgba(160, 107, 255, 0.1); /* Adjusted shadow */
   overflow: hidden;
   z-index: 10;
 }
@@ -40,11 +40,11 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 28px;
+  width: 90px; /* Adjusted width */
+  height: 21px; /* Adjusted height */
   background: #1a1a1a;
-  border-bottom-left-radius: 18px;
-  border-bottom-right-radius: 18px;
+  border-bottom-left-radius: 14px; /* Adjusted border-radius */
+  border-bottom-right-radius: 14px; /* Adjusted border-radius */
   z-index: 20;
 }
 
@@ -62,15 +62,15 @@
 
 /* QR Code */
 .qrCode {
-  width: 200px;
-  height: 200px;
+  width: 150px; /* Reduced from 200px */
+  height: 150px; /* Reduced from 200px */
   background: white;
-  border-radius: 16px;
-  padding: 10px;
-  display: flex; /* Centering for SVG */
+  border-radius: 12px; /* Adjusted border-radius */
+  padding: 8px; /* Adjusted padding */
+  display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 30px rgba(255,255,255,0.1);
+  box-shadow: 0 0 20px rgba(255,255,255,0.1); /* Adjusted shadow */
 }
 
 /* Scan Line */
@@ -94,10 +94,10 @@
   height: 40%;
   background: rgba(30, 28, 40, 0.95);
   backdrop-filter: blur(20px);
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
+  border-top-left-radius: 18px; /* Reduced from 24px */
+  border-top-right-radius: 18px; /* Reduced from 24px */
   border-top: 1px solid var(--glass-border);
-  padding: 24px;
+  padding: 18px; /* Reduced from 24px */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,25 +107,25 @@
 }
 
 .modalTitle {
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduced from 1.2rem */
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: 0.5rem; /* Reduced margin */
 }
 
 .modalText {
-  font-size: 0.9rem;
+  font-size: 0.75rem; /* Reduced from 0.9rem */
   color: var(--text-secondary);
   text-align: center;
 }
 
 .yesButton {
   width: 100%;
-  padding: 1rem;
+  padding: 0.75rem; /* Reduced from 1rem */
   background: var(--electric-purple);
-  border-radius: 12px;
+  border-radius: 9px; /* Reduced from 12px */
   color: white;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.85rem; /* Reduced from 1rem */
   border: none;
   cursor: pointer;
 }
@@ -143,8 +143,8 @@
 .successWrapper {
   position: absolute;
   top: 50%;
-  left: 50%; /* Nudged left as requested */
-  right: 50%;
+  left: 50%;
+  right: 50%; /* Reset right */
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
@@ -156,12 +156,12 @@
 }
 
 .checkCircle {
-  width: 120px;
-  height: 120px;
+  width: 90px; /* Reduced from 120px */
+  height: 90px; /* Reduced from 120px */
   border-radius: 50%;
-  background: var(--electric-purple); /* Success Green */
+  background: var(--electric-purple);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 60px var(--electric-purple);
+  box-shadow: 0 0 45px var(--electric-purple); /* Adjusted shadow */
 }

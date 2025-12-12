@@ -1,0 +1,208 @@
+{
+  "nav": {
+    "documentation": "Documentation",
+    "forBusiness": "Pour les entreprises",
+    "getApp": "Télécharger"
+  },
+  "hero": {
+    "headline": "Prouvez l'âge.\nPas l'identité.",
+    "subheadline": "Des preuves privées et rapides sans tout révéler. Le premier portefeuille d'identité en double aveugle pour l'ère numérique, pensé pour les utilisateurs.",
+    "downloadIOS": "Télécharger pour iOS",
+    "readWhitepaper": "Lire le livre blanc"
+  },
+  "sections": {
+    "privacyBack": "La confidentialité est de retour sur Internet"
+  },
+  "phoneDemo": {
+    "title": "Comment ça marche",
+    "modalTitle": "Valider l'identité ?",
+    "modalText": "website.com veut vérifier que vous avez plus de 18 ans.",
+    "approve": "Approuver",
+    "verified": "Vérifié"
+  },
+  "carousel": {
+    "title": "Découvrez le futur",
+    "subtitle": "Une interface fluide conçue pour la confidentialité, la rapidité et la facilité d'utilisation.",
+    "appTitle": "Appli POWM",
+    "cards": {
+      "screenshot1_alt": "Capture d'écran de l'écran d'accueil de l'application",
+      "screenshot2_alt": "Capture d'écran du processus de vérification d'identité",
+      "screenshot3_alt": "Capture d'écran des paramètres de l'application",
+      "screenshot4_alt": "Capture d'écran de l'historique des transactions"
+    }
+  },
+  "features": {
+    "speed": {
+      "title": "Ultra Rapide",
+      "caption": "Vérification en 2 clics.",
+      "verified": "VÉRIFIÉ"
+    },
+    "dev": {
+        "title": "Facile à Implémenter",
+        "caption": "Un Webhook. Un QR Code. Zéro maux de tête.",
+        "completed": "Terminé"
+    },
+    "local": {
+        "title": "Priorité Utilisateur / Local",
+        "caption": "Vos données restent sur votre téléphone."
+    },
+    "relay": {
+        "title": "Relais Double Aveugle",
+        "caption": "Nous ne savons pas où vous allez.",
+        "user": "Utilisateur",
+        "merchant": "Marchand"
+    },
+    "trust": {
+        "title": "Ultra Transparent",
+        "caption": "Ne nous faites pas confiance. Vérifiez-nous.",
+        "operational": "Systèmes Opérationnels",
+        "online": "EN LIGNE",
+        "audit": "Dernier Audit :",
+        "auditStatus": "Réussi (Déc 2025)",
+        "source": "Code Source",
+        "security": "Sécurité"
+    },
+    "world": {
+        "title": "Échelle Mondiale",
+        "caption": "Fonctionne partout."
+    }
+  },
+  "footer": {
+    "description": "Restaurer la confidentialité sur Internet, une vérification à la fois. Solutions d'identité sécurisées, rapides et centrées sur l'utilisateur.",
+    "product": "Produit",
+    "resources": "Ressources",
+    "company": "Entreprise",
+    "links": {
+        "features": "Fonctionnalités",
+        "integrations": "Intégrations",
+        "pricing": "Tarifs",
+        "changelog": "Journal des modifications",
+        "documentation": "Documentation",
+        "apiReference": "Référence API",
+        "community": "Communauté",
+        "helpCenter": "Centre d'aide",
+        "about": "À propos",
+        "blog": "Blog",
+        "careers": "Carrières",
+        "contact": "Contact",
+        "privacy": "Politique de confidentialité",
+        "terms": "Conditions d'utilisation"
+    },
+    "rights": "© {{year}} Powm Inc. Tous droits réservés."
+  },
+  "legal": {
+    "privacy": {
+      "title": "DOCUMENT 1 : POLITIQUE DE CONFIDENTIALITÉ",
+      "effectiveDate": "DATE D'ENTRÉE EN VIGUEUR : 12 décembre 2025",
+      "sections": [
+        {
+          "title": "1. L'ENGAGEMENT \"ANTI-COLLECTE\"",
+          "content": "Contrairement aux fournisseurs d'identité traditionnels, Powm est conçu pour ne rien savoir de vous. Nous avons conçu notre système de manière à ne pas pouvoir accéder techniquement à vos données personnelles, même si nous le voulions."
+        },
+        {
+          "title": "2. CE QUE NOUS NE COLLECTONS PAS",
+          "content": "Pour être absolument clair, lorsque vous utilisez l'application Powm ou vérifiez votre âge :\n\nAUCUNE information d'identification personnelle (PII) : Nous ne collectons pas votre nom, date de naissance, adresse, numéro de téléphone ou scans de pièces d'identité.\n\nAUCUNE adresse IP : Nous ne journalisons ni ne stockons votre adresse IP.\n\nAUCUNE empreinte de navigateur : Nous ne collectons pas de données sur votre navigateur, la taille de votre écran ou le niveau de batterie pour vous suivre.\n\nAUCUN historique d'utilisation : Nous ne savons pas quels sites Web vous visitez. Nous traitons uniquement un signal cryptographique \"Oui/Non\"."
+        },
+        {
+          "title": "3. CE QUE NOUS STOCKONS (ET POURQUOI)",
+          "content": "Nous ne stockons qu'une seule donnée pour faire fonctionner le service :\n\nIdentifiant de l'appareil (Clé de sécurité) :\n\nCe que c'est : Un identifiant cryptographique unique et aléatoire généré sur votre appareil mobile.\n\nPourquoi nous en avons besoin : Cela permet à votre téléphone spécifique de \"signer\" une preuve d'âge sans révéler qui vous êtes. Cela garantit qu'une preuve ne peut pas être falsifiée ou rejouée par des pirates.\n\nPeut-il vous identifier ? Non. Il n'est pas lié à votre e-mail, numéro de téléphone ou compte Apple/Google. C'est juste une chaîne aléatoire de chiffres liée à cette installation spécifique de l'application."
+        },
+        {
+          "title": "4. STOCKAGE LOCAL (LOCAL-FIRST)",
+          "content": "Votre portefeuille d'identité (y compris votre attestation d'âge) est stocké localement sur votre appareil.\n\nIl est chiffré dans l'enclave sécurisée (Secure Enclave) de votre téléphone.\n\nLes serveurs de Powm ne détiennent pas les clés de déchiffrement.\n\nSi vous supprimez l'application sans sauvegarde, vos données sont perdues à jamais. Nous ne pouvons pas les restaurer car nous ne les avons jamais eues."
+        },
+        {
+          "title": "5. RÉTENTION DES DONNÉES",
+          "content": "Journaux de vérification : Lorsque vous prouvez votre âge, nous générons un journal technique temporaire (Timestamp Succès/Échec). Ce journal ne contient aucune URL de destination ni aucune identité d'utilisateur.\n\nSuppression : Ces journaux techniques sont automatiquement purgés tous les 30 jours."
+        }
+      ]
+    },
+    "terms": {
+      "title": "DOCUMENT 2 : CONDITIONS GÉNÉRALES D'UTILISATION (CGU)",
+      "lastUpdated": "DERNIÈRE MISE À JOUR : 12 décembre 2025",
+      "sections": [
+        {
+          "title": "1. ACCEPTATION DES CONDITIONS",
+          "content": "En téléchargeant ou en utilisant Powm (\"Le Service\"), vous acceptez ces conditions. Si vous n'êtes pas d'accord, supprimez l'application immédiatement."
+        },
+        {
+          "title": "2. LE SERVICE",
+          "content": "Powm est un outil technique qui vous permet de détenir et de présenter des preuves numériques (par exemple, \"Plus de 18 ans\").\n\nPas de garantie : Nous fournissons le service \"tel quel\". Nous ne garantissons pas que tous les marchands ou sites Web accepteront les preuves Powm.\n\nPas une pièce d'identité gouvernementale : Powm ne remplace pas votre passeport physique ou votre permis de conduire dans les cadres juridiques ou gouvernementaux."
+        },
+        {
+          "title": "3. RESPONSABILITÉ DE L'UTILISATEUR (VOTRE APPAREIL, VOTRE RESPONSABILITÉ)",
+          "content": "Parce que Powm est un portefeuille Local-First, vous êtes le seul gardien de vos données.\n\nSécurité : Vous êtes responsable de la sécurisation de votre téléphone (Code PIN, Biométrie). Si quelqu'un vole votre téléphone déverrouillé et l'utilise pour vérifier l'âge, Powm n'est pas responsable.\n\nPerte de données : Si vous perdez votre appareil ou supprimez l'application, vos identifiants sont perdus. Powm ne peut pas les récupérer pour vous."
+        },
+        {
+          "title": "4. UTILISATION INTERDITE",
+          "content": "Vous acceptez de ne pas utiliser Powm pour :\n\nVerifying age to access illegal content (e.g., CSAM, terrorism).\n\nAttempting to reverse-engineer the cryptographic protocols.\n\nUsing a rooted/jailbroken device to spoof verifications.\n\nRésultat : Nous nous réservons le droit de bannir l'identifiant de votre appareil si nous détectons une falsification cryptographique ou une activité de type bot."
+        },
+        {
+          "title": "5. LIMITATION DE RESPONSABILITÉ",
+          "content": "Dans la mesure maximale permise par la loi, Powm ne sera pas responsable des dommages indirects, accessoires ou consécutifs découlant de votre utilisation du service.\n\nNous ne sommes pas responsables du contenu, des pratiques de confidentialité ou de la sécurité des sites Web tiers auxquels vous accédez en utilisant Powm. Nous ouvrons seulement la porte ; nous ne contrôlons pas ce qu'il y a à l'intérieur."
+        },
+        {
+          "title": "6. LOI APPLICABLE",
+          "content": "Ces conditions sont régies par les lois françaises. Tout litige sera résolu devant les tribunaux de Paris."
+        }
+      ]
+    },
+    "whitepaper": {
+      "title": "L'identité sans surveillance",
+      "subtitle": "Le Standard Powm pour un Web Respectueux de la Vie Privée",
+      "version": "Version : 1.0 (Document de Vision)",
+      "date": "Date : Décembre 2025",
+      "sections": [
+        {
+          "title": "1. Résumé éxécutif",
+          "content": "Internet a été bâti sur une promesse de liberté : le pouvoir d'explorer, d'apprendre et de se connecter sans être surveillé. Cependant, l'anonymat qui a propulsé la croissance du web a créé des zones d'ombre dangereuses. Nous reconnaissons collectivement que les mineurs doivent être protégés des contenus inappropriés et que les espaces numériques nécessitent une certaine responsabilité pour fonctionner en sécurité.\n\nLa réponse actuelle de l'industrie face à ces défis consiste à basculer vers l'extrême inverse : la Surveillance Totale. Pour se conformer aux nouvelles régulations de sécurité (telles que la directive AVMSD et les exigences de l'ARCOM), les sites web contraignent les utilisateurs à télécharger des documents d'identité sensibles, créant de fait un \"point de contrôle numérique\" à chaque URL. Cette approche résout un problème de sécurité en créant un désastre pour la vie privée : la crise de la \"Sur-transmission des Données\" (Data Over-Transmission).\n\nPowm propose une troisième voie. Nous refusons d'accepter que la sécurité exige l'abandon de la vie privée. Nous construisons l'infrastructure de la Preuve sans Divulgation (Proof without Exposure) : une couche d'identité neutre et en double aveugle qui permet aux utilisateurs de prouver leur éligibilité (ex : \"Plus de 18 ans\") sans jamais révéler qui ils sont."
+        },
+        {
+          "title": "2. Le paradoxe de la vie privée",
+          "level": 2,
+          "content": ""
+        },
+        {
+          "title": "2.1. Le \"Faux Choix\"",
+          "level": 3,
+          "content": "Aujourd'hui, régulateurs et citoyens se voient présenter une fausse dichotomie :\n\n1. Le Far West : Un internet anonyme où les enfants sont exposés au danger et où les activités illégales ne sont pas contrôlées.\n2. L'État de Surveillance : Un internet \"sûr\" où chaque accès nécessite le scan d'une pièce d'identité gouvernementale, créant des journaux permanents du comportement des utilisateurs."
+        },
+        {
+          "title": "2.2. Le Risque de Centralisation (\"Honeypots\")",
+          "level": 3,
+          "content": "Les solutions actuelles de vérification d'âge reposent sur des bases de données centralisées. On demande aux utilisateurs de télécharger leur passeport ou leur carte bancaire pour vérifier leur âge. Cela crée des \"Honeypots\" massifs : des serveurs centralisés détenant des millions d'enregistrements sensibles. Lorsque ces bases de données sont inévitablement piratées, les dommages pour l'utilisateur sont catastrophiques et irréversibles.\n\nDe plus, ce modèle crée une Économie de la Surveillance. Si un utilisateur doit s'identifier pour accéder à du contenu adulte ou à des sites de jeux d'argent, cet événement de vérification devient une donnée en soi. Cette donnée sensible, qui a visité quoi, est souvent monétisée ou fuite, violant fondamentalement le droit à la vie privée de l'utilisateur."
+        },
+        {
+          "title": "3. La solution Powm : Preuve sans Divulgation",
+          "level": 2,
+          "content": "Nous ne sommes pas aveugles aux réalités de la sécurité en ligne. Nous convenons que certaines portes numériques doivent être fermées aux mineurs. Cependant, la clé de ces portes ne devrait pas être un dossier complet d'informations personnelles.\n\nPowm introduit un paradigme de Minimalisme des Données basé sur trois principes fondamentaux :"
+        },
+        {
+          "title": "3.1. Le Coffre-fort \"Local-First\"",
+          "level": 3,
+          "content": "Nous croyons que l'identité appartient à l'individu, pas à la plateforme. Dans l'architecture Powm, les attributs d'identité de l'utilisateur (comme une attestation d'âge) sont stockés localement sur le matériel sécurisé de son appareil.\n\n- La Différence : Au lieu que le cloud détienne votre pièce d'identité, c'est votre téléphone qui détient un \"permis\" cryptographique.\n- Le Bénéfice : Un pirate ne peut pas voler ce que nous ne détenons pas."
+        },
+        {
+          "title": "3.2. Découpler l'Identité de l'Activité",
+          "level": 3,
+          "content": "Les systèmes actuels lient Qui Vous Êtes avec Ce Que Vous Faites. Powm sépare mathématiquement ces deux points de données.\nNous utilisons une architecture en Double Aveugle :\n\n- L'Émetteur (qui vérifie la pièce d'identité) connaît l'utilisateur, mais ne voit jamais quels sites il visite.\n- Le Vérificateur (le site web) voit que l'utilisateur a \"Plus de 18 ans\", mais ne voit jamais son nom ni son adresse IP.\n- Le Résultat : La conformité est assurée, mais la trace est rompue."
+        },
+        {
+          "title": "3.3. La Logique Zero-Knowledge",
+          "level": 3,
+          "content": "Nous remplaçons le \"Transfert de Données\" par la \"Preuve Cryptographique\".\nLorsqu'un utilisateur visite un site restreint, Powm n'envoie pas de date de naissance (ex : \"15/05/1990\"). À la place, le protocole génère un jeton cryptographique à usage unique qui répond à une question précise : \"Cet utilisateur a-t-il > 18 ans?\"\nLa réponse est un OUI ou NON vérifié. Aucune autre donnée ne quitte l'appareil."
+        },
+        {
+          "title": "4. Plaidoyer pour une utilité neutre",
+          "level": 2,
+          "content": "Alors que la demande pour l'identité numérique croît, la société fait face à une question critique : Qui doit détenir les clés ?\n\n- Les Big Tech ? Si nous comptons sur la connexion sociale (ex : \"Se connecter avec...\"), notre identité devient juste un signal de plus pour le ciblage publicitaire.\n- Les Gouvernements ? Les systèmes de connexion étatiques risquent de créer une infrastructure de surveillance de masse.\n\nPowm se positionne comme une Utilité Externe Neutre.\n\n- Pas de Réseau Publicitaire : Nous ne monétisons pas les données utilisateurs. Notre modèle économique repose sur le service de vérification lui-même (un modèle utilitaire), alignant nos intérêts avec la confidentialité.\n- Pas d'Agenda Politique : Nous sommes un intermédiaire technique, assurant que la loi est respectée sans étendre le périmètre de contrôle.\n\nNous croyons qu'en étant un tiers indépendant, un tiers qui, légalement et techniquement, ne peut pas voir les données, nous offrons la seule voie viable vers une adoption de masse. Les utilisateurs ne confieront pas leur pièce d'identité à un site pornographique. Ils ne feront pas confiance à un courtier de données. Ils ont besoin d'un bouclier neutre."
+        },
+        {
+          "title": "5. Conclusion",
+          "level": 2,
+          "content": "Le monde est prêt pour l'identité numérique, mais il rejette le \"surveillance\" modèle de la dernière décennie.\nNous construisons Powm pour prouver que Vie Privée et Sécurité ne sont pas ennemies. Elles sont partenaires.\n\nEn tirant parti de la cryptographie moderne, nous pouvons faire respecter les lois du monde physique, protéger les enfants et réduire la fraude, tout en préservant l'esprit du monde numérique : la liberté d'être privé.\n\nPowm : Prouvez l'Âge. Pas l'Identité."
+        }
+      ]
+    }
+  }
+}

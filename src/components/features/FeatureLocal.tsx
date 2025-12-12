@@ -2,8 +2,10 @@ import React from 'react';
 import styles from './Features.module.css';
 import { motion } from 'framer-motion';
 import { Lock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const FeatureLocal: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <div className={styles.featureCard} style={{ overflow: 'hidden', position: 'relative' }}>
         
@@ -58,8 +60,8 @@ export const FeatureLocal: React.FC = () => {
 
       {/* Content Bottom */}
       <div className={styles.contentWrapper} style={{ zIndex: 1 }}>
-        <h3 className={styles.title}>User First / Local-First</h3>
-        <p className={styles.caption}>Your data stays on your phone.</p>
+        <h3 className={styles.title}>{t('features.local.title')}</h3>
+        <p className={styles.caption}>{t('features.local.caption')}</p>
       </div>
     </div>
   );

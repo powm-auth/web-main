@@ -1,0 +1,19 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { LegalLayout } from '../components/LegalLayout';
+import bgImage from '../assets/3rdbackground.png';
+
+export const Whitepaper: React.FC = () => {
+  const { t } = useTranslation();
+
+  const sections = t('legal.whitepaper.sections', { returnObjects: true }) as Array<{title: string, content: string, level?: 2 | 3}>;
+
+  return (
+    <LegalLayout 
+      title={t('legal.whitepaper.title')}
+      date={`${t('legal.whitepaper.version')} - ${t('legal.whitepaper.date')}`}
+      sections={sections}
+      backgroundImage={bgImage}
+    />
+  );
+};

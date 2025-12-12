@@ -2,8 +2,11 @@ import React from 'react';
 import styles from './Features.module.css';
 import { motion } from 'framer-motion';
 import { Check, Fingerprint } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const FeatureSpeed: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.featureCard}>
       {/* Visual Top */}
@@ -94,7 +97,7 @@ export const FeatureSpeed: React.FC = () => {
                 animate={{ y: [10, 0], opacity: [0, 1, 1, 0] }}
                 transition={{ duration: 2.5, times: [0.1, 0.2, 0.8, 1], repeat: Infinity, repeatDelay: 0 }}
             >
-                <Check size={14} strokeWidth={4} /> VERIFIED
+                <Check size={14} strokeWidth={4} /> {t('features.speed.verified')}
             </motion.div>
 
         </div>
@@ -103,8 +106,8 @@ export const FeatureSpeed: React.FC = () => {
 
       {/* Content Bottom */}
       <div className={styles.contentWrapper}>
-        <h3 className={styles.title}>Lightning Fast</h3>
-        <p className={styles.caption}>Check in 2 clicks.</p>
+        <h3 className={styles.title}>{t('features.speed.title')}</h3>
+        <p className={styles.caption}>{t('features.speed.caption')}</p>
       </div>
     </div>
   );

@@ -2,8 +2,11 @@ import React from 'react';
 import styles from './Features.module.css';
 import { motion } from 'framer-motion';
 import { EyeOff } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export const FeatureRelay: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={styles.featureCard}>
       <div className={styles.visualContainer}>
@@ -91,14 +94,14 @@ export const FeatureRelay: React.FC = () => {
         />
         
         {/* Labels */}
-        <div style={{ position: 'absolute', left: '10%', top: '30%', fontSize: '0.7rem', color: '#aaa' }}>User</div>
+        <div style={{ position: 'absolute', left: '10%', top: '30%', fontSize: '0.7rem', color: '#aaa' }}>{t('features.relay.user')}</div>
         <div style={{ position: 'absolute', left: '50%', top: '20%', transform: 'translateX(-50%)', fontSize: '0.7rem', color: 'var(--white)', fontWeight: 'bold' }}>Powm</div>
-        <div style={{ position: 'absolute', right: '10%', top: '30%', fontSize: '0.7rem', color: '#aaa' }}>Merchant</div>
+        <div style={{ position: 'absolute', right: '10%', top: '30%', fontSize: '0.7rem', color: '#aaa' }}>{t('features.relay.merchant')}</div>
       </div>
 
       <div className={styles.contentWrapper}>
-        <h3 className={styles.title}>Double-Blind Relay</h3>
-        <p className={styles.caption}>We don't know where you go.</p>
+        <h3 className={styles.title}>{t('features.relay.title')}</h3>
+        <p className={styles.caption}>{t('features.relay.caption')}</p>
       </div>
     </div>
   );

@@ -1,7 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import styles from './Features.module.css';
+import { useTranslation } from 'react-i18next';
 
 export const FeatureWorld: React.FC = () => {
+  const { t } = useTranslation();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -109,8 +111,8 @@ export const FeatureWorld: React.FC = () => {
       height: '100%' // Ensure it fills the grid cell
     }}>
       <div className={styles.contentWrapper} style={{ flex: 0, paddingTop: '1.5rem' }}>
-        <h3 className={styles.title}>Global Scale</h3>
-        <p className={styles.caption}>Works everywhere.</p>
+        <h3 className={styles.title}>{t('features.world.title')}</h3>
+        <p className={styles.caption}>{t('features.world.caption')}</p>
       </div>
       
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
