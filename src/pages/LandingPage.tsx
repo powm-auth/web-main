@@ -9,11 +9,12 @@ import { GrainyBackground } from '../components/GrainyBackground';
 import { useScroll, useTransform } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import bgImage from '../assets/background.png';
+import { SEO } from '../components/SEO';
 
 export const LandingPage: React.FC = () => {
   const { t } = useTranslation();
   const bentoRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: bentoRef,
     offset: ["start center", "end start"]
@@ -23,15 +24,19 @@ export const LandingPage: React.FC = () => {
 
   return (
     <div style={{ minHeight: '100vh' }}>
+      <SEO
+        title={t('seo.home.title', 'Home')}
+        description={t('seo.home.description', 'Powm is the first double-blind identity wallet for the digital age.')}
+      />
       <GrainyBackground overlayOpacity={overlayOpacity} backgroundImage={bgImage} />
       <Navbar />
       <main>
         <HeroSection />
-        
+
         <div ref={bentoRef} style={{ margin: '4rem 0' }}>
-          <h2 style={{ 
-            textAlign: 'center', 
-            fontSize: '2.5rem', 
+          <h2 style={{
+            textAlign: 'center',
+            fontSize: '2.5rem',
             marginBottom: '2rem',
             background: 'var(--gradient-text)',
             WebkitBackgroundClip: 'text',
