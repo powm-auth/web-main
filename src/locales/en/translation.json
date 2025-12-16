@@ -2,7 +2,23 @@
   "nav": {
     "documentation": "Documentation",
     "forBusiness": "For Business",
-    "getApp": "Get App"
+    "getApp": "Get App",
+    "blog": "Blog",
+    "usecases": "Use Cases"
+  },
+  "seo": {
+      "whitepaper": {
+          "title": "Whitepaper",
+          "description": "Read the Powm Whitepaper."
+      },
+      "blog": {
+          "title": "Blog",
+          "description": "Latest updates from Powm."
+      },
+      "usecases": {
+          "title": "Use Cases",
+          "description": "How Powm solves identity verification."
+      }
   },
   "hero": {
     "headline": "Prove the age.\nNot the identity.",
@@ -39,7 +55,7 @@
     },
     "dev": {
         "title": "Easy to Implement",
-        "caption": "One Webhook. One QR Code. Zero Headaches.",
+        "caption": "One SDK. One QR Code. Zero Headaches.",
         "completed": "Completed"
     },
     "local": {
@@ -91,6 +107,28 @@
     "rights": "© {{year}} Powm Inc. All rights reserved."
   },
   "legal": {
+    "blog": {
+      "title": "Blog",
+      "version": "Latest",
+      "date": "Updates",
+      "sections": [
+        {
+          "title": "Coming Soon",
+          "content": "Stay tuned for updates from the Powm team."
+        }
+      ]
+    },
+    "usecases": {
+      "title": "Use Cases",
+      "version": "Overview",
+      "date": "Solutions",
+      "sections": [
+        {
+          "title": "Identity Verification",
+          "content": "Verify age without collecting personal data."
+        }
+      ]
+    },
     "privacy": {
       "title": "DOCUMENT 1: PRIVACY POLICY",
       "effectiveDate": "EFFECTIVE DATE: December 12, 2025",

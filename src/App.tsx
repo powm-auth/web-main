@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { LandingPage } from './pages/LandingPage';
 import { Whitepaper } from './pages/Whitepaper';
+import { Blog } from './pages/Blog';
+import { Usecases } from './pages/Usecases';
 import { Wip } from './pages/Wip';
 import { NotFound } from './pages/NotFound';
 import { Privacy } from './pages/Privacy';
@@ -15,6 +17,8 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/whitepaper" element={<Whitepaper />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/usecases" element={<Usecases />} />
         <Route path="/wip" element={<Wip />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />

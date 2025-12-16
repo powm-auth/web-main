@@ -42,6 +42,8 @@ export const Navbar: React.FC = () => {
       
       <div className={styles.rightGroup}>
         <LanguageSelector />
+        <Link to="/usecases" className={styles.navLink}>{t('nav.usecases')}</Link>
+        <Link to="/blog" className={styles.navLink}>{t('nav.blog')}</Link>
         <a href="#" className={styles.navLink} onClick={(e) => { e.preventDefault(); navigate('/wip'); }}>{t('nav.documentation')}</a>
         
         <button className={styles.businessBtn} onClick={() => navigate('/wip')}>

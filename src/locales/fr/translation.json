@@ -2,7 +2,23 @@
   "nav": {
     "documentation": "Documentation",
     "forBusiness": "Pour les entreprises",
-    "getApp": "Télécharger"
+    "getApp": "Télécharger",
+    "blog": "Blog",
+    "usecases": "Cas d'usage"
+  },
+  "seo": {
+      "whitepaper": {
+          "title": "Livre Blanc",
+          "description": "Lire le livre blanc Powm."
+      },
+      "blog": {
+          "title": "Blog",
+          "description": "Dernières mises à jour de Powm."
+      },
+      "usecases": {
+          "title": "Cas d'usage",
+          "description": "Comment Powm résout la vérification d'identité."
+      }
   },
   "hero": {
     "headline": "Prouvez l'âge.\nPas l'identité.",
@@ -39,7 +55,7 @@
     },
     "dev": {
         "title": "Facile à Implémenter",
-        "caption": "Un Webhook. Un QR Code. Zéro maux de tête.",
+        "caption": "Un SDK. Un QR Code. Zéro maux de tête.",
         "completed": "Terminé"
     },
     "local": {
@@ -91,6 +107,28 @@
     "rights": "© {{year}} Powm Inc. Tous droits réservés."
   },
   "legal": {
+    "blog": {
+      "title": "Blog",
+      "version": "Dernier",
+      "date": "Mises à jour",
+      "sections": [
+        {
+          "title": "Bientôt disponible",
+          "content": "Restez à l'écoute des mises à jour de l'équipe Powm."
+        }
+      ]
+    },
+    "usecases": {
+      "title": "Cas d'usage",
+      "version": "Aperçu",
+      "date": "Solutions",
+      "sections": [
+        {
+          "title": "Vérification d'identité",
+          "content": "Vérifiez l'âge sans collecter de données personnelles."
+        }
+      ]
+    },
     "privacy": {
       "title": "DOCUMENT 1 : POLITIQUE DE CONFIDENTIALITÉ",
       "effectiveDate": "DATE D'ENTRÉE EN VIGUEUR : 12 décembre 2025",
