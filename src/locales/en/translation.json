@@ -192,53 +192,68 @@
       "date": "Date: December 2025",
       "sections": [
         {
-          "title": "1. Executive summary",
-          "content": "The internet was built on a promise of freedom, the power to explore, learn, and connect without being watched. However, the anonymity that fueled the web’s growth has created dangerous blind spots. We collectively recognize that children must be protected from unsuitable content, and that digital spaces require accountability to function safely.\n\nThe current industry response to these challenges is to swing to the extreme of Total Surveillance. To comply with new safety regulations (such as AVMSD and ARCOM requirements), websites are forcing users to upload sensitive identity documents, effectively creating a \"digital checkpoint\" at every URL. This approach solves one safety problem by creating a massive privacy disaster: the \"Data Over-Transmission\" crisis.\n\nPowm proposes a third path. We refuse to accept that safety requires the surrender of privacy. We are building the infrastructure for Proof without Exposure, a neutral, double-blind identity layer that allows users to prove their eligibility (e.g., \"Over 18\") without revealing who they are."
+          "title": "1. Introduction",
+          "content": "The internet was built on a promise of freedom, but anonymity has created dangerous blind spots. To protect minors and enforce accountability, regulators (ARCOM, AVMSD) now demand strict verification, pushing the industry toward a <strong>\"Total Surveillance\"</strong> model where digital checkpoints require sensitive document uploads at every URL.\n\nPowm proposes a third path. We are a next-generation digital identity wallet that solves the two biggest problems in the digital economy: <strong>User Friction</strong> and <strong>Data Liability</strong>.\n\nWe refuse to accept the <strong>\"False Choice\"</strong> between safety and privacy. By allowing users to store their own identity credentials locally and share them via <strong>cryptographic proofs</strong>, Powm enables businesses to verify users instantly without ever handling, seeing, or storing sensitive personal documents."
         },
         {
-          "title": "2. The privacy paradox",
+          "title": "2. The Market Problem: A Broken Trust Model",
           "level": 2,
-          "content": ""
+          "content": "Today’s identity landscape fails both the user and the enterprise."
         },
         {
-          "title": "2.1. The \"False Choice\"",
+          "title": "2.1 The \"Honeypot\" & Liability Risk",
           "level": 3,
-          "content": "Today, regulators and citizens are presented with a false dichotomy:\n\n1. The Wild West: An anonymous internet where children are exposed to harm and illegal activity goes unchecked.\n2. The Surveillance State: A \"safe\" internet where every access requires a scan of a government ID, creating permanent logs of user behavior."
+          "content": "Current solutions rely on centralized databases. To verify age or identity, businesses must collect passports and selfies, creating massive <strong>\"honeypots\"</strong> of data.\n\nFor Business: This creates toxic liability (GDPR/CCPA compliance burdens) and turns their servers into targets for hackers.\n\nFor Users: It creates a <strong>\"Surveillance Economy.\"</strong> Verification events become data points, tracking user behavior across the web."
         },
         {
-          "title": "2.2. The Honeypot Risk",
+          "title": "2.2 The Friction Crisis",
           "level": 3,
-          "content": "Current age-verification solutions rely on centralized databases. Users are asked to upload passports or credit cards to verify their age. This creates massive \"honeypots\", centralized servers holding millions of sensitive records. When these databases are inevitably breached, the damage to the user is catastrophic and irreversible.\n\nFurthermore, this model creates a Surveillance Economy. If a user must identify themselves to access adult content or gambling sites, that verification event becomes a data point. This sensitive data, who visited what, is often monetized or leaked, fundamentally violating the user's right to privacy."
+          "content": "Security kills conversion. Users detest long signup forms and intrusive facial scans.\n\n<strong>Drop-off:</strong> When faced with a requirement to upload an ID for a simple transaction, users churn.\n\n<strong>Redundancy:</strong> Users are forced to repeat this invasive process for every single service they use."
         },
         {
           "title": "3. The Powm Solution: Proof Without Exposure",
           "level": 2,
-          "content": "We are not blind to the realities of online safety. We agree that certain digital doors should be locked to minors. However, the key to those doors should not be a dossier of personal information.\n\nPowm introduces a paradigm of Data Minimalism based on three core principles:"
+          "content": "Powm flips the model. We replace <strong>\"Data Transfer\"</strong> with <strong>\"Cryptographic Proof.\"</strong> Instead of a central database holding IDs, every user carries their own verified credentials in a secure wallet on their device."
         },
         {
-          "title": "3.1. The Local-First Vault",
+          "title": "3.1 The Local-First Vault",
           "level": 3,
-          "content": "We believe that identity belongs to the individual, not the platform. In the Powm architecture, the user’s identity attributes (such as an age attestation) are stored locally on their device’s secure hardware.\n\n- The Difference: Instead of the cloud holding your ID, your phone holds a cryptographic \"permit.\"\n- The Benefit: A hacker cannot steal what we do not hold."
+          "content": "We believe identity belongs to the individual. In the Powm architecture, identity attributes (e.g., \"Over 18,\" \"Verified Resident\") are stored locally on the user’s device hardware (<strong>Secure Enclave</strong>).\n\nThe Difference: Instead of the cloud holding the ID, the phone holds a cryptographic \"permit.\"\n\nThe Benefit: A hacker cannot steal what the business does not hold."
         },
         {
-          "title": "3.2. Decoupling Identity from Activity",
+          "title": "3.2 Double-Blind Architecture",
           "level": 3,
-          "content": "Current systems link Who You Are with What You Do. Powm mathematically separates these two data points.\nWe utilize a Double-Blind architecture:\n\n- The Issuer (who checks the ID) knows the user, but never sees which websites they visit.\n- The Verifier (the website) sees that the user is \"Over 18,\" but never sees the user's name or IP address.\n- The Result: Compliance is achieved, but the trail is broken."
+          "content": "Powm mathematically decouples Who You Are from What You Do.\n\nThe <strong>Issuer</strong> checks the ID but never sees which websites the user visits.\n\nThe <strong>Verifier</strong> (Business) receives a guaranteed \"YES/NO\" token but never sees the user’s IP address or raw data.\n\nThe Result: Compliance is achieved, but the digital trail is broken."
         },
         {
-          "title": "3.3. Zero-Knowledge Logic",
-          "level": 3,
-          "content": "We replace \"Data Transfer\" with \"Cryptographic Proof.\\nWhen a user visits a restricted site, Powm does not send a date of birth (e.g., \"15/05/1990\"). Instead, the protocol generates a single-use cryptographic token that answers a specific question: \"Is this user > 18?\"\nThe answer is a verified YES or NO. No other data leaves the device."
-        },
-        {
-          "title": "4. The case for a neutral utility",
+          "title": "4. How It Works: The \"Scan & Go\" Flow",
           "level": 2,
-          "content": "As the demand for digital identity grows, society faces a critical question: Who should hold the keys?\n\n- Big Tech? If we rely on social login (e.g., \"Login with...\"), our identity becomes just another signal for ad targeting.\n- Governments? State-run login systems risk creating an infrastructure for mass surveillance.\n\nPowm positions itself as a Neutral External Utility.\n\n- No Ad Network: We do not monetize user data. Our business model is based on the service of verification itself (a utility model), aligning our incentives with privacy.\n- No Political Agenda: We are a technical intermediary, ensuring the law is respected without expanding the scope of control.\n\nWe believe that by being an independent third party, one that legally and technically cannot see the data, we offer the only viable path to mass adoption. Users will not trust a porn site with their ID. They will not trust a data broker. They need a neutral shield."
+          "content": "We have reduced complex cryptography to a seamless consumer experience.\n\nChallenge: The Application (e.g., an age-restricted site or event venue) requests a specific verification: \"Verify user is 18+.\"\n\nInteraction: The user scans a QR code with their Powm Wallet.\n\nDecision: The user sees exactly what is requested and taps \"Accept.\"\n\nProof: Powm generates a single-use cryptographic token. The Application receives instant verification.\n\nThe Result: No forms. No typing. No uploads. Just a \"Green Light\" in seconds."
         },
         {
-          "title": "5. Conclusion",
+          "title": "5. Business Value & Use Cases",
           "level": 2,
-          "content": "The world is ready for digital identity, but it is rejecting the \"surveillance\" model of the past decade.\nWe are building Powm to prove that Privacy and Safety are not enemies. They are partners.\n\nBy leveraging modern cryptography, we can enforce the laws of the physical world, protecting children and reducing fraud, while preserving the spirit of the digital world: the freedom to be private.\n\nPowm: Prove the Age. Not the Identity."
+          "content": ""
+        },
+        {
+          "title": "5.1 Value Proposition",
+          "level": 3,
+          "content": "<strong>Zero Friction</strong>: Instant verification increases conversion rates compared to traditional ID uploads.\n\n<strong>Zero Liability</strong>: Businesses never touch raw PII (Personally Identifiable Information). You cannot lose data you never collected.\n\n<strong>Cost Efficiency</strong>: Our model is significantly cheaper than current market solutions (e.g., legacy KYC providers)."
+        },
+        {
+          "title": "5.2 Pricing Model: Pay-Per-Challenge",
+          "level": 3,
+          "content": "We operate on a utility model.\n\nPerformance-based: You are only charged when a user successfully completes an identity challenge.\n\nRisk-free: Unsuccessful, canceled, or rejected challenges incur no cost."
+        },
+        {
+          "title": "5.3 Core Use Cases",
+          "level": 3,
+          "content": "Age-Restricted Content: Compliance with ARCOM/AVMSD without ruining the user experience or storing user logs.\n\nE-Commerce & Retail: Instant checkout verification for high-risk goods.\n\nPhysical Access & Events: Combining ticketing with identity in a single, unforgeable scan."
+        },
+        {
+          "title": "6. Conclusion: A Neutral Utility",
+          "level": 2,
+          "content": "As the demand for digital identity grows, society rejects the \"Surveillance State\" model. Powm positions itself as a <strong>Neutral External Utility</strong>: we have no ad network, no political agenda, and no data monetization.\n\nWe are building the infrastructure where Privacy and Safety are partners. By leveraging modern cryptography, we allow businesses to enforce the laws of the physical world while preserving the freedom of the digital world.\n\nPowm: <strong>Prove the Age. Not the Identity.</strong>\n\nContact & Demo\nReady to eliminate verification friction and liability? Email: contact@powm.app"
         }
       ]
     }

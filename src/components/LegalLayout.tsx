@@ -30,6 +30,20 @@ export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, date, sections,
   // Transition to black quickly as user scrolls down
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
+  const highlightText = (text: string) => {
+    const parts = text.split(/(<strong>.*?<\/strong>)/g);
+    return parts.map((part, index) => {
+      if (part.startsWith('<strong>') && part.endsWith('</strong>')) {
+        return (
+          <span key={index} style={{ color: 'var(--electricMain)', fontWeight: 'bold' }}>
+            {part.replace(/<\/?strong>/g, '')}
+          </span>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
     <div ref={containerRef} style={{ minHeight: '100vh', position: 'relative' }}>
       <GrainyBackground overlayOpacity={overlayOpacity} backgroundImage={backgroundImage} />
@@ -99,7 +113,7 @@ export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, date, sections,
                 color: '#ddd',
                 whiteSpace: 'pre-line' // Important for respecting newlines in the JSON content
               }}>
-                {section.content}
+                {highlightText(section.content)}
               </p>
             </div>
           ))}
