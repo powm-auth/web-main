@@ -2,7 +2,8 @@
   display: grid;
   /* 3 Columns: Left (1fr), Middle (1fr - High Card), Right (1fr) */
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto; /* Two rows for the side cards */
+  grid-template-rows: auto auto;
+  /* Two rows for the side cards */
   gap: 1.5rem;
   padding: 0 var(--spacing-md);
   max-width: 1200px;
@@ -10,19 +11,33 @@
 }
 
 /* Left Column Container (Implicit in grid placement) */
-.leftColItem1 { grid-column: 1; grid-row: 1; }
-.leftColItem2 { grid-column: 1; grid-row: 2; }
+.leftColItem1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.leftColItem2 {
+  grid-column: 1;
+  grid-row: 2;
+}
 
 /* Middle Column - Tall Card */
-.middleColItem { 
-  grid-column: 2; 
-  grid-row: 1 / span 2; 
+.middleColItem {
+  grid-column: 2;
+  grid-row: 1 / span 2;
   height: 100%;
 }
 
 /* Right Column Container */
-.rightColItem1 { grid-column: 3; grid-row: 1; }
-.rightColItem2 { grid-column: 3; grid-row: 2; }
+.rightColItem1 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.rightColItem2 {
+  grid-column: 3;
+  grid-row: 2;
+}
 
 
 @media (max-width: 1024px) {
@@ -30,12 +45,18 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
   }
+
   .middleColItem {
-    grid-column: span 2; /* Full width or top */
+    grid-column: span 2;
+    /* Full width or top */
     grid-row: auto;
     min-height: 400px;
   }
-  .leftColItem1, .leftColItem2, .rightColItem1, .rightColItem2 {
+
+  .leftColItem1,
+  .leftColItem2,
+  .rightColItem1,
+  .rightColItem2 {
     grid-column: auto;
     grid-row: auto;
   }
@@ -44,6 +65,11 @@
 @media (max-width: 700px) {
   .gridContainer {
     grid-template-columns: 1fr;
+    padding: 0 1rem;
+    /* Ensure side padding on small screens */
   }
-  .middleColItem { grid-column: 1; }
+
+  .middleColItem {
+    grid-column: 1;
+  }
 }
