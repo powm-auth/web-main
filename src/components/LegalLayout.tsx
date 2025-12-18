@@ -3,31 +3,29 @@ import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { GrainyBackground } from './GrainyBackground';
 import { useScroll, useTransform } from 'framer-motion';
-
+import styles from './LegalLayout.module.css';
 
 interface LegalSection {
   title: string;
   content: string;
-  level?: 2 | 3; // Add level for heading hierarchy
+  level?: 2 | 3;
 }
 
 interface LegalLayoutProps {
   title: string;
   date: string;
   sections: LegalSection[];
-  backgroundImage?: string; // Add backgroundImage prop
+  backgroundImage?: string;
 }
 
 export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, date, sections, backgroundImage }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  
-  // Track scroll progress of the entire page content
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
 
-  // Transition to black quickly as user scrolls down
   const overlayOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
 
   const highlightText = (text: string) => {
@@ -35,7 +33,7 @@ export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, date, sections,
     return parts.map((part, index) => {
       if (part.startsWith('<strong>') && part.endsWith('</strong>')) {
         return (
-          <span key={index} style={{ color: 'var(--electricMain)', fontWeight: 'bold' }}>
+          <span key={index} className={styles.highlight}>
             {part.replace(/<\/?strong>/g, '')}
           </span>
         );
@@ -45,74 +43,27 @@ export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, date, sections,
   };
 
   return (
-    <div ref={containerRef} style={{ minHeight: '100vh', position: 'relative' }}>
+    <div ref={containerRef} className={styles.container}>
       <GrainyBackground overlayOpacity={overlayOpacity} backgroundImage={backgroundImage} />
       <Navbar />
-      <main style={{ 
-        paddingTop: '120px', 
-        paddingBottom: '4rem', 
-        color: 'white', 
-        maxWidth: '900px', 
-        margin: '0 auto', 
-        paddingLeft: '24px', 
-        paddingRight: '24px',
-        position: 'relative',
-        zIndex: 1
-      }}>
-        <h1 style={{ 
-          fontSize: '3rem', 
-          marginBottom: '0.5rem',
-          background: 'linear-gradient(180deg, #FFFFFF 0%, #AAAAAA 100%)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          textAlign: 'center'
-        }}>{title}</h1>
-        
-        <p style={{
-          textAlign: 'center',
-          color: 'var(--text-secondary)',
-          fontSize: '1rem',
-          marginBottom: '3rem',
-          fontFamily: 'monospace'
-        }}>{date}</p>
-        
-        <div style={{ 
-          background: 'rgba(20, 20, 25, 0.4)', 
-          backdropFilter: 'blur(10px)', 
-          padding: '3rem', 
-          borderRadius: '24px',
-          border: '1px solid rgba(255, 255, 255, 0.08)',
-        }}>
+      <main className={styles.mainContent}>
+        <h1 className={styles.title}>{title}</h1>
+
+        <p className={styles.date}>{date}</p>
+
+        <div className={styles.contentBox}>
           {sections.map((section, index) => (
-            <div key={index} style={{ marginBottom: '2.5rem' }}>
+            <div key={index} className={styles.section}>
               {section.level === 3 ? (
-                <h3 style={{ 
-                  fontSize: '1.1rem', 
-                  color: 'var(--white)',
-                  marginBottom: '1rem',
-                  borderBottom: '1px solid rgba(255,255,255,0.05)',
-                  paddingBottom: '0.5rem',
-                }}>
+                <h3 className={styles.subSectionTitle}>
                   {section.title}
                 </h3>
               ) : (
-                <h2 style={{ 
-                  fontSize: '1.25rem', 
-                  color: 'var(--white)',
-                  marginBottom: '1rem',
-                  borderBottom: '1px solid rgba(255,255,255,0.1)',
-                  paddingBottom: '0.5rem',
-                  display: 'inline-block'
-                }}>
+                <h2 className={styles.sectionTitle}>
                   {section.title}
                 </h2>
               )}
-              <p style={{ 
-                fontSize: '1.05rem', 
-                lineHeight: '1.7', 
-                color: '#ddd',
-                whiteSpace: 'pre-line' // Important for respecting newlines in the JSON content
-              }}>
+              <p className={styles.content}>
                 {highlightText(section.content)}
               </p>
             </div>

@@ -29,11 +29,7 @@ export const HeroLogo: React.FC = () => {
         {/* The glassmorphic/blur fill layer using foreignObject */}
         <foreignObject width="100%" height="100%" clipPath="url(#logoClip)">
           <div style={{ 
-            width: '100%', 
-            height: '100%', 
-            backdropFilter: 'blur(10px)', 
-            WebkitBackdropFilter: 'blur(10px)',
-            background: 'rgba(255, 255, 255, 0.05)' 
+
           }} />
         </foreignObject>
 

@@ -1,0 +1,120 @@
+/* Main container styles to ensure full height and relative positioning for background */
+.container {
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Main content wrapper */
+.mainContent {
+    padding-top: 120px;
+    padding-bottom: 4rem;
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Page Title with Gradient */
+.title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(180deg, #FFFFFF 0%, #AAAAAA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+/* Date/Subtitle styling */
+.date {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    font-family: monospace;
+}
+
+/* Glassmorphism content box */
+.contentBox {
+    background: rgba(20, 20, 25, 0.4);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section {
+    margin-bottom: 2.5rem;
+}
+
+/* Section Headings */
+.subSectionTitle {
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.5rem;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Content Text */
+.content {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #ddd;
+    white-space: pre-line;
+}
+
+/* Highlighted Text */
+.highlight {
+    color: var(--electricMain);
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .mainContent {
+        padding-top: 100px;
+        /* reduced from 120px */
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 3rem;
+    }
+
+    .title {
+        font-size: 2rem;
+        /* reduced from 3rem */
+    }
+
+    .contentBox {
+        padding: 1.5rem;
+        /* reduced from 3rem */
+        border-radius: 16px;
+    }
+
+    .date {
+        margin-bottom: 2rem;
+        /* reduced from 3rem */
+    }
+
+    .sectionTitle {
+        font-size: 1.15rem;
+        /* slightly reduced */
+    }
+
+    .content {
+        font-size: 1rem;
+        /* slightly reduced for better reading on mobile */
+    }
+}

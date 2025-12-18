@@ -14,11 +14,15 @@
   justify-content: space-between;
 }
 
+/* Left group (Logo wrapper) */
 .leftGroup {
   display: flex;
   align-items: center;
   gap: 0.1rem;
   cursor: pointer;
+  position: relative;
+  z-index: 1002;
+  /* Ensure logo is above everything */
 }
 
 .logoText {
@@ -77,8 +81,121 @@
   box-shadow: 0 0 20px var(--electricMain);
 }
 
+/* Mobile Toggle */
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 8px;
+  position: relative;
+}
+
+/* Ensure logo is above mobile menu */
+.logoLink {
+  position: relative;
+  z-index: 1002;
+}
+
+/* Mobile Menu Content - Hidden by default */
+.mobileMenuWrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 100%);
+  /* Full height minus header height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  overflow-y: auto;
+  /* Allow content scroll if needed */
+}
+
+/* When Navbar is expanded */
+.navbar.expanded {
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.6);
+  /* Slightly darker/stronger base */
+  align-items: flex-start;
+  /* Align header items to top */
+  backdrop-filter: blur(25px) saturate(180%);
+  /* Enhanced blur for full screen */
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+}
+
+.navbar.expanded .mobileMenuWrapper {
+  opacity: 1;
+  pointer-events: all;
+  top: 0;
+  height: 100vh;
+  padding-top: 6rem;
+  /* Space for the header part */
+  background: transparent;
+  /* Inherits from navbar */
+}
+
+/* Mobile Menu Items Stacking */
+.mobileMenuContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.mobileNavLink {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  opacity: 0.8;
+  position: relative;
+}
+
+.mobileNavLink:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.mobileButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.mobileButtons .businessBtn,
+.mobileButtons .getAppBtn {
+  width: 100%;
+  max-width: 280px;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
 @media (max-width: 768px) {
   .rightGroup {
     display: none;
+  }
+
+  .mobileMenuBtn {
+    display: block;
+  }
+
+  .navbar {
+    transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.4s ease, backdrop-filter 0.4s ease;
   }
 }
