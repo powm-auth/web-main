@@ -7,18 +7,56 @@
     "usecases": "Use Cases"
   },
   "seo": {
-      "whitepaper": {
-          "title": "Whitepaper",
-          "description": "Read the Powm Whitepaper."
+    "whitepaper": {
+      "title": "Whitepaper",
+      "description": "Read the Powm Whitepaper."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Latest updates from Powm."
+    },
+    "usecases": {
+      "title": "Use Cases",
+      "description": "How Powm solves identity verification."
+    }
+  },
+  "usecases_page": {
+    "title": "Use Cases",
+    "subtitle": "Real-world problems solved by Zero-Knowledge Proofs.",
+    "cases": {
+      "compliance": {
+        "title": "Compliance & Age Restriction",
+        "subtitle": "ARCOM / AVMSD Ready",
+        "context": "Websites dealing with adult content, gambling, or alcohol face heavy fines if they don't verify age. However, users refuse to upload passports due to privacy fears.",
+        "challenge": "Is the user legally allowed to access this content?",
+        "proof": "Returns a boolean YES/NO value (e.g., \"Age ≥ 18\").",
+        "hidden": "Exact date of birth, name, address, photo."
       },
-      "blog": {
-          "title": "Blog",
-          "description": "Latest updates from Powm."
+      "p2p": {
+        "title": "Peer-to-Peer Trust",
+        "subtitle": "Marketplaces & Dating",
+        "context": "Platforms based on mutual trust or Dating apps need trust. Users want to know the person they are meeting is real, but neither party wants to exchange full names prematurely.",
+        "challenge": "Is this a real, verified human being? Does their face match their ID?",
+        "proof": "Returns \"Identity Verified\" status + Certified First Name and Current Photo.",
+        "hidden": "Last name, home address, document number."
       },
-      "usecases": {
-          "title": "Use Cases",
-          "description": "How Powm solves identity verification."
+      "retail": {
+        "title": "Physical Retail & Nightlife",
+        "subtitle": "The \"Bouncer\" Mode",
+        "context": "Buying vape/alcohol or entering a nightclub. Currently, the cashier sees everything (address, full name) just to check the birth year. It’s slow and risky.",
+        "challenge": "Is this person old enough to buy/enter?",
+        "proof": "The user flashes their Powm QR code. The merchant’s terminal flashes GREEN.",
+        "hidden": "The physical ID card stays in the pocket. No personal data displayed."
+      },
+      "antibot": {
+        "title": "Anti-Bot & Sybil Resistance",
+        "subtitle": "Proving \"Humanity\"",
+        "context": "Ticket sales, limited edition drops, or polls. Bots buy everything in seconds. Captchas are failing.",
+        "challenge": "Is this a unique human being?",
+        "proof": "Returns a Unique Humanity Token derived from the ID.",
+        "hidden": "Who the person is. Confirms \"User X is a unique human who hasn't voted yet.\""
       }
+    }
   },
   "hero": {
     "headline": "Prove the age.\nNot the identity.",
@@ -54,33 +92,33 @@
       "verified": "VERIFIED"
     },
     "dev": {
-        "title": "Easy to Implement",
-        "caption": "One SDK. One QR Code. Zero Headaches.",
-        "completed": "Completed"
+      "title": "Easy to Implement",
+      "caption": "One SDK. One QR Code. Zero Headaches.",
+      "completed": "Completed"
     },
     "local": {
-        "title": "User First / Local-First",
-        "caption": "Your data stays on your phone."
+      "title": "User First / Local-First",
+      "caption": "Your data stays on your phone."
     },
     "relay": {
-        "title": "Double-Blind Relay",
-        "caption": "We don't know where you go.",
-        "user": "Utilisateur",
-        "merchant": "Marchand"
+      "title": "Double-Blind Relay",
+      "caption": "We don't know where you go.",
+      "user": "Utilisateur",
+      "merchant": "Marchand"
     },
     "trust": {
-        "title": "Ultra Transparent",
-        "caption": "Don't trust us. Verify us.",
-        "operational": "Systems Operational",
-        "online": "ONLINE",
-        "audit": "Latest Audit:",
-        "auditStatus": "Passed (Dec 2025)",
-        "source": "Source",
-        "security": "Security"
+      "title": "Ultra Transparent",
+      "caption": "Don't trust us. Verify us.",
+      "operational": "Systems Operational",
+      "online": "ONLINE",
+      "audit": "Latest Audit:",
+      "auditStatus": "Passed (Dec 2025)",
+      "source": "Source",
+      "security": "Security"
     },
     "world": {
-        "title": "Global Scale",
-        "caption": "Works everywhere."
+      "title": "Global Scale",
+      "caption": "Works everywhere."
     }
   },
   "footer": {
@@ -89,20 +127,20 @@
     "resources": "Resources",
     "company": "Company",
     "links": {
-        "features": "Features",
-        "integrations": "Integrations",
-        "pricing": "Pricing",
-        "changelog": "Changelog",
-        "documentation": "Documentation",
-        "apiReference": "API Reference",
-        "community": "Community",
-        "helpCenter": "Help Center",
-        "about": "About",
-        "blog": "Blog",
-        "careers": "Careers",
-        "contact": "Contact",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
+      "features": "Features",
+      "integrations": "Integrations",
+      "pricing": "Pricing",
+      "changelog": "Changelog",
+      "documentation": "Documentation",
+      "apiReference": "API Reference",
+      "community": "Community",
+      "helpCenter": "Help Center",
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
     },
     "rights": "© {{year}} Powm Inc. All rights reserved."
   },

@@ -7,18 +7,56 @@
     "usecases": "Cas d'usage"
   },
   "seo": {
-      "whitepaper": {
-          "title": "Livre Blanc",
-          "description": "Lire le livre blanc Powm."
+    "whitepaper": {
+      "title": "Livre Blanc",
+      "description": "Lire le livre blanc Powm."
+    },
+    "blog": {
+      "title": "Blog",
+      "description": "Dernières mises à jour de Powm."
+    },
+    "usecases": {
+      "title": "Cas d'usage",
+      "description": "Comment Powm résout la vérification d'identité."
+    }
+  },
+  "usecases_page": {
+    "title": "Cas d'usage",
+    "subtitle": "Des problèmes réels résolus par les Preuves à Divulgation Nulle de Connaissance.",
+    "cases": {
+      "compliance": {
+        "title": "Conformité & Restriction d'Âge",
+        "subtitle": "Prêt pour ARCOM / AVMSD",
+        "context": "Les sites traitant de contenu adulte, jeux d'argent ou alcool risquent de lourdes amendes s'ils ne vérifient pas l'âge. Cependant, les utilisateurs refusent de télécharger une pièce d'identité par peur pour leur vie privée.",
+        "challenge": "L'utilisateur est-il légalement autorisé à accéder à ce contenu ?",
+        "proof": "Retourne une valeur booléenne OUI/NON (ex: \"Âge ≥ 18\").",
+        "hidden": "Date de naissance exacte, nom, adresse, photo."
       },
-      "blog": {
-          "title": "Blog",
-          "description": "Dernières mises à jour de Powm."
+      "p2p": {
+        "title": "Confiance Pair-à-Pair",
+        "subtitle": "Places de marché & Rencontres",
+        "context": "Les plateformes basées sur la confiance mutuelle ou les sites de rencontres ont besoin de confiance. Les utilisateurs veulent savoir que la personne qu'ils rencontrent est réelle, sans échanger de noms complets prématurément.",
+        "challenge": "Est-ce un être humain réel et vérifié ? Son visage correspond-il à sa pièce d'identité ?",
+        "proof": "Retourne le statut \"Identité Vérifiée\" + Prénom Certifié et Photo Actuelle.",
+        "hidden": "Nom de famille, adresse personnelle, numéro de document."
       },
-      "usecases": {
-          "title": "Cas d'usage",
-          "description": "Comment Powm résout la vérification d'identité."
+      "retail": {
+        "title": "Commerce Physique & Vie Nocturne",
+        "subtitle": "Le Mode \"Videur\"",
+        "context": "Acheter de l'alcool ou entrer en boîte de nuit. Actuellement, le caissier voit tout (adresse, nom complet) juste pour vérifier l'année de naissance. C'est lent et risqué.",
+        "challenge": "Cette personne est-elle assez âgée pour acheter/entrer ?",
+        "proof": "L'utilisateur présente son QR code Powm. Le terminal du marchand clignote VERT.",
+        "hidden": "La pièce d'identité reste dans la poche. Aucune donnée personnelle affichée."
+      },
+      "antibot": {
+        "title": "Anti-Bot & Résistance Sybil",
+        "subtitle": "Prouver l'\"Humanité\"",
+        "context": "Billetterie, drops en édition limitée ou sondages. Les bots achètent tout en quelques secondes. Les captchas échouent.",
+        "challenge": "Est-ce un être humain unique ?",
+        "proof": "Retourne un Jeton d'Humanité Unique dérivé de l'ID.",
+        "hidden": "Qui est la personne. Confirme juste \"Utilisateur X est un humain unique qui n'a pas encore voté.\""
       }
+    }
   },
   "hero": {
     "headline": "Prouvez l'âge.\nPas l'identité.",
@@ -54,33 +92,33 @@
       "verified": "VÉRIFIÉ"
     },
     "dev": {
-        "title": "Facile à Implémenter",
-        "caption": "Un SDK. Un QR Code. Zéro maux de tête.",
-        "completed": "Terminé"
+      "title": "Facile à Implémenter",
+      "caption": "Un SDK. Un QR Code. Zéro maux de tête.",
+      "completed": "Terminé"
     },
     "local": {
-        "title": "Priorité Utilisateur / Local",
-        "caption": "Vos données restent sur votre téléphone."
+      "title": "Priorité Utilisateur / Local",
+      "caption": "Vos données restent sur votre téléphone."
     },
     "relay": {
-        "title": "Relais Double Aveugle",
-        "caption": "Nous ne savons pas où vous allez.",
-        "user": "Utilisateur",
-        "merchant": "Marchand"
+      "title": "Relais Double Aveugle",
+      "caption": "Nous ne savons pas où vous allez.",
+      "user": "Utilisateur",
+      "merchant": "Marchand"
     },
     "trust": {
-        "title": "Ultra Transparent",
-        "caption": "Ne nous faites pas confiance. Vérifiez-nous.",
-        "operational": "Systèmes Opérationnels",
-        "online": "EN LIGNE",
-        "audit": "Dernier Audit :",
-        "auditStatus": "Réussi (Déc 2025)",
-        "source": "Code Source",
-        "security": "Sécurité"
+      "title": "Ultra Transparent",
+      "caption": "Ne nous faites pas confiance. Vérifiez-nous.",
+      "operational": "Systèmes Opérationnels",
+      "online": "EN LIGNE",
+      "audit": "Dernier Audit :",
+      "auditStatus": "Réussi (Déc 2025)",
+      "source": "Code Source",
+      "security": "Sécurité"
     },
     "world": {
-        "title": "Échelle Mondiale",
-        "caption": "Fonctionne partout."
+      "title": "Échelle Mondiale",
+      "caption": "Fonctionne partout."
     }
   },
   "footer": {
@@ -89,20 +127,20 @@
     "resources": "Ressources",
     "company": "Entreprise",
     "links": {
-        "features": "Fonctionnalités",
-        "integrations": "Intégrations",
-        "pricing": "Tarifs",
-        "changelog": "Journal des modifications",
-        "documentation": "Documentation",
-        "apiReference": "Référence API",
-        "community": "Communauté",
-        "helpCenter": "Centre d'aide",
-        "about": "À propos",
-        "blog": "Blog",
-        "careers": "Carrières",
-        "contact": "Contact",
-        "privacy": "Politique de confidentialité",
-        "terms": "Conditions d'utilisation"
+      "features": "Fonctionnalités",
+      "integrations": "Intégrations",
+      "pricing": "Tarifs",
+      "changelog": "Journal des modifications",
+      "documentation": "Documentation",
+      "apiReference": "Référence API",
+      "community": "Communauté",
+      "helpCenter": "Centre d'aide",
+      "about": "À propos",
+      "blog": "Blog",
+      "careers": "Carrières",
+      "contact": "Contact",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
     },
     "rights": "© {{year}} Powm Inc. Tous droits réservés."
   },
