@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { GrainyBackground } from './GrainyBackground';
 import { useScroll, useTransform } from 'framer-motion';
 import styles from './LegalLayout.module.css';
+import { PageTransition } from './PageTransition';
 
 interface LegalSection {
   title: string;
@@ -45,32 +45,34 @@ export const LegalLayout: React.FC<LegalLayoutProps> = ({ title, date, sections,
   return (
     <div ref={containerRef} className={styles.container}>
       <GrainyBackground overlayOpacity={overlayOpacity} backgroundImage={backgroundImage} />
-      <Navbar />
-      <main className={styles.mainContent}>
-        <h1 className={styles.title}>{title}</h1>
 
-        <p className={styles.date}>{date}</p>
+      <PageTransition>
+        <main className={styles.mainContent}>
+          <h1 className={styles.title}>{title}</h1>
 
-        <div className={styles.contentBox}>
-          {sections.map((section, index) => (
-            <div key={index} className={styles.section}>
-              {section.level === 3 ? (
-                <h3 className={styles.subSectionTitle}>
-                  {section.title}
-                </h3>
-              ) : (
-                <h2 className={styles.sectionTitle}>
-                  {section.title}
-                </h2>
-              )}
-              <p className={styles.content}>
-                {highlightText(section.content)}
-              </p>
-            </div>
-          ))}
-        </div>
-      </main>
-      <Footer />
+          <p className={styles.date}>{date}</p>
+
+          <div className={styles.contentBox}>
+            {sections.map((section, index) => (
+              <div key={index} className={styles.section}>
+                {section.level === 3 ? (
+                  <h3 className={styles.subSectionTitle}>
+                    {section.title}
+                  </h3>
+                ) : (
+                  <h2 className={styles.sectionTitle}>
+                    {section.title}
+                  </h2>
+                )}
+                <p className={styles.content}>
+                  {highlightText(section.content)}
+                </p>
+              </div>
+            ))}
+          </div>
+        </main>
+        <Footer />
+      </PageTransition>
     </div>
   );
 };

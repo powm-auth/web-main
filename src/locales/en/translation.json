@@ -76,22 +76,25 @@
         }
       }
     },
-    "visuals": {
+    "visual_compliance": {
       "compliance_check": "Regulatory Check",
       "gdpr": "GDPR Compliance",
       "sovereignty": "Data Sovereignty",
-      "privacy": "Privacy Preserved"
+      "privacy": "Privacy Preserved",
+      "status_label": "Status: Fully Compliant"
     },
     "visual_onboarding": {
       "scan": "Scan to Verify",
       "processing": "Processing Proof...",
       "verified": "Verified",
-      "valid": "Zero-Knowledge Proof Valid"
+      "valid": "Zero-Knowledge Proof Valid",
+      "seconds": "s"
     },
     "visual_liability": {
       "protected": "Protected",
       "zero_retention": "Zero Retention",
-      "yes_no_only": "Cryptographic Yes/No Only"
+      "yes_no_only": "Cryptographic Yes/No Only",
+      "data_label": "DATA"
     },
     "visual_integration": {
       "installed": "+ @powm/sdk@1.0.0 installed",
@@ -147,7 +150,8 @@
         "proof": "Returns a Unique Humanity Token derived from the ID.",
         "hidden": "Who the person is. Confirms \"User X is a unique human who hasn't voted yet.\""
       }
-    }
+    },
+    "cta_button": "Start Building"
   },
   "hero": {
     "headline": "Prove the age.\nNot the identity.",
@@ -385,6 +389,56 @@
           "content": "As the demand for digital identity grows, society rejects the \"Surveillance State\" model. Powm positions itself as a <strong>Neutral External Utility</strong>: we have no ad network, no political agenda, and no data monetization.\n\nWe are building the infrastructure where Privacy and Safety are partners. By leveraging modern cryptography, we allow businesses to enforce the laws of the physical world while preserving the freedom of the digital world.\n\nPowm: <strong>Prove the Age. Not the Identity.</strong>\n\nContact & Demo\nReady to eliminate verification friction and liability? Email: contact@powm.app"
         }
       ]
+    }
+  },
+  "contact": {
+    "title": "Get in touch",
+    "emailPlaceholder": "Your mail",
+    "submit": "Send Request",
+    "successTitle": "Request Sent",
+    "successMessage": "We'll contact you shortly."
+  },
+  "download_page": {
+    "title": "Download Powm",
+    "subtitle": "Pre alpha coming soon",
+    "button": "I'm interested in using Powm"
+  },
+  "notfound_page": {
+    "title": "404 - Page not found"
+  },
+  "wip_page": {
+    "title": "Work in Progress"
+  },
+  "proofs": {
+    "age": {
+      "generated": "PROOF GENERATED",
+      "value": "Age ≥ 18",
+      "verified": "VERIFIED",
+      "dob": "DOB",
+      "name": "NAME",
+      "address": "ADDRESS",
+      "zkp": "Zero-Knowledge Proof"
+    },
+    "identity": {
+      "id_name": "Powm ID",
+      "credential": "Verified Credential",
+      "status": "Status",
+      "status_value": "Identity Verified",
+      "first_name": "First Name",
+      "name_val": "Sarah",
+      "last_name": "Last Name",
+      "certified": "P2P CERTIFIED"
+    },
+    "retail": {
+      "pos": "MERCHANT POS",
+      "approved": "APPROVED",
+      "scanning": "Scanning..."
+    },
+    "humanity": {
+      "token": "ANTI-SYBIL TOKEN",
+      "human": "Unique Human",
+      "score": "Uniqueness Score",
+      "non_transferable": "NON-TRANSFERABLE"
     }
   }
 }

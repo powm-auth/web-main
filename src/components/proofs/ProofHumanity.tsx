@@ -3,7 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Fingerprint, Bot, ShieldCheck } from 'lucide-react';
 
+import { useTranslation } from 'react-i18next';
+
 export const ProofHumanity: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -63,8 +66,8 @@ export const ProofHumanity: React.FC = () => {
             </motion.div>
 
             <div style={{ textAlign: 'center', zIndex: 1 }}>
-                <div style={{ color: '#c471ed', fontWeight: 600, letterSpacing: '1px', fontSize: '12px', marginBottom: '8px' }}>ANTI-SYBIL TOKEN</div>
-                <div style={{ color: '#fff', fontSize: '24px', fontWeight: 700, marginBottom: '24px' }}>Unique Human</div>
+                <div style={{ color: '#c471ed', fontWeight: 600, letterSpacing: '1px', fontSize: '12px', marginBottom: '8px' }}>{t('proofs.humanity.token')}</div>
+                <div style={{ color: '#fff', fontSize: '24px', fontWeight: 700, marginBottom: '24px' }}>{t('proofs.humanity.human')}</div>
             </div>
 
             <div style={{
@@ -78,7 +81,7 @@ export const ProofHumanity: React.FC = () => {
                 border: '1px solid rgba(255,255,255,0.05)'
             }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#aaa' }}>
-                    <span>Uniqueness Score</span>
+                    <span>{t('proofs.humanity.score')}</span>
                     <span style={{ color: '#39FF14' }}>100%</span>
                 </div>
                 <div style={{ width: '100%', height: '4px', background: '#333', borderRadius: '2px' }}>
@@ -102,7 +105,7 @@ export const ProofHumanity: React.FC = () => {
                 width: '100%',
                 textAlign: 'center'
             }}>
-                0x71C...39A &bull; NON-TRANSFERABLE
+                0x71C...39A &bull; {t('proofs.humanity.non_transferable')}
             </div>
 
         </motion.div>

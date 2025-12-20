@@ -3,7 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { User } from 'lucide-react';
 
+import { useTranslation } from 'react-i18next';
+
 export const ProofIdentity: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -48,8 +51,8 @@ export const ProofIdentity: React.FC = () => {
                     <User color="#fff" size={24} />
                 </div>
                 <div>
-                    <div style={{ color: '#fff', fontWeight: 600, fontSize: '16px' }}>Powm ID</div>
-                    <div style={{ color: '#666', fontSize: '12px' }}>Verified Credential</div>
+                    <div style={{ color: '#fff', fontWeight: 600, fontSize: '16px' }}>{t('proofs.identity.id_name')}</div>
+                    <div style={{ color: '#666', fontSize: '12px' }}>{t('proofs.identity.credential')}</div>
                 </div>
             </div>
 
@@ -73,10 +76,10 @@ export const ProofIdentity: React.FC = () => {
                     borderRadius: '12px',
                     border: '1px solid rgba(255,255,255,0.05)'
                 }}>
-                    <div style={{ fontSize: '10px', color: '#888', textTransform: 'uppercase', marginBottom: '4px' }}>Status</div>
+                    <div style={{ fontSize: '10px', color: '#888', textTransform: 'uppercase', marginBottom: '4px' }}>{t('proofs.identity.status')}</div>
                     <div style={{ color: '#4D9FFF', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px' }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 12.17l7.59-7.59L19 6l-9 9z" /></svg>
-                        Identity Verified
+                        {t('proofs.identity.status_value')}
                     </div>
                 </div>
 
@@ -86,20 +89,20 @@ export const ProofIdentity: React.FC = () => {
                     borderRadius: '12px',
                     border: '1px solid rgba(255,255,255,0.05)'
                 }}>
-                    <div style={{ fontSize: '10px', color: '#888', textTransform: 'uppercase', marginBottom: '4px' }}>First Name</div>
-                    <div style={{ color: '#fff', fontWeight: 500 }}>Sarah</div>
+                    <div style={{ fontSize: '10px', color: '#888', textTransform: 'uppercase', marginBottom: '4px' }}>{t('proofs.identity.first_name')}</div>
+                    <div style={{ color: '#fff', fontWeight: 500 }}>{t('proofs.identity.name_val')}</div>
                 </div>
 
                 {/* Obscured Fields */}
                 <div style={{ opacity: 0.4 }}>
-                    <div style={{ fontSize: '10px', color: '#888', textTransform: 'uppercase', marginBottom: '4px' }}>Last Name</div>
+                    <div style={{ fontSize: '10px', color: '#888', textTransform: 'uppercase', marginBottom: '4px' }}>{t('proofs.identity.last_name')}</div>
                     <div style={{ background: '#333', height: '14px', width: '80%', borderRadius: '4px' }}></div>
                 </div>
             </div>
 
             <div style={{ textAlign: 'center', marginTop: '1rem', zIndex: 1 }}>
                 <span style={{ fontSize: '10px', color: '#444', border: '1px solid #333', padding: '4px 8px', borderRadius: '4px' }}>
-                    P2P CERTIFIED
+                    {t('proofs.identity.certified')}
                 </span>
             </div>
 

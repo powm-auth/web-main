@@ -141,7 +141,7 @@ export const VisualOnboarding: React.FC = () => {
                                 </svg>
                             </div>
                             <div style={{ marginTop: '20px', fontSize: '24px', fontWeight: 700, fontVariantNumeric: 'tabular-nums', color: '#fff' }}>
-                                <CountUp duration={1500} /> s
+                                <CountUp duration={1500} /> {t('for_business_page.visual_onboarding.seconds')}
                             </div>
                             <div style={{ marginTop: '8px', color: '#888', fontSize: '12px' }}>
                                 {t('for_business_page.visual_onboarding.processing')}

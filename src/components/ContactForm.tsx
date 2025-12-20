@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 interface ContactFormProps {
   buttonText: string;
 }
 
 export const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [step, setStep] = useState<'idle' | 'form' | 'success'>('idle');
 
-      const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault();
-      const form = e.target as HTMLFormElement;
-      const email = (form.elements.namedItem('email') as HTMLInputElement).value;
-  
-      // Simulate sending email
-      console.log(`Sending email to contact@powm.app from ${email}`);
-      // In a real app, we'd use an API call here.
-      // For now, let's open mailto as a fallback or just show success
-      // window.location.href = `mailto:contact@powm.app?subject=Powm Inquiry&body=${encodeURIComponent(message)}`;
-  
-      setStep('success');    setTimeout(() => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+
+    // Simulate sending email
+    console.log(`Sending email to contact@powm.app from ${email}`);
+    // In a real app, we'd use an API call here.
+    // For now, let's open mailto as a fallback or just show success
+    // window.location.href = `mailto:contact@powm.app?subject=Powm Inquiry&body=${encodeURIComponent(message)}`;
+
+    setStep('success'); setTimeout(() => {
       setIsOpen(false);
       setStep('idle');
     }, 3000);
@@ -72,7 +74,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
             onClick={(e) => e.stopPropagation()}
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-              <h3 style={{ color: '#fff', margin: 0, fontSize: '1.25rem' }}>Get in touch</h3>
+              <h3 style={{ color: '#fff', margin: 0, fontSize: '1.25rem' }}>{t('contact.title', 'Get in touch')}</h3>
               <button
                 type="button"
                 onClick={(e) => { e.stopPropagation(); setIsOpen(false); setStep('idle'); }}
@@ -85,7 +87,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
             <input
               name="email"
               type="email"
-              placeholder="Your mail"
+              placeholder={t('contact.emailPlaceholder', 'Your mail')}
               required
               style={{
                 background: 'rgba(255,255,255,0.05)',
@@ -111,7 +113,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
                 marginTop: '8px'
               }}
             >
-              Send Request
+              {t('contact.submit', 'Send Request')}
             </button>
           </motion.form>
         )}
@@ -136,8 +138,8 @@ export const ContactForm: React.FC<ContactFormProps> = ({ buttonText }) => {
                 <polyline points="20 6 9 17 4 12"></polyline>
               </svg>
             </div>
-            <h3 style={{ margin: '0 0 8px' }}>Request Sent</h3>
-            <p style={{ margin: 0, color: '#888', fontSize: '14px' }}>We'll contact you shortly.</p>
+            <h3 style={{ margin: '0 0 8px' }}>{t('contact.successTitle', 'Request Sent')}</h3>
+            <p style={{ margin: 0, color: '#888', fontSize: '14px' }}>{t('contact.successMessage', 'We\'ll contact you shortly.')}</p>
           </motion.div>
         )}
       </motion.div>

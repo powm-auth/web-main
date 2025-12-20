@@ -43,14 +43,14 @@ export const VisualCompliance: React.FC = () => {
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
                     <ClipboardList color="var(--electric-purple)" size={20} />
-                    <span style={{ fontSize: '14px', color: '#fff', fontWeight: 600 }}>{t('for_business_page.visuals.compliance_check')}</span>
+                    <span style={{ fontSize: '14px', color: '#fff', fontWeight: 600 }}>{t('for_business_page.visual_compliance.compliance_check')}</span>
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                     {[
-                        { name: t('for_business_page.visuals.gdpr'), delay: 0.2 },
-                        { name: t('for_business_page.visuals.sovereignty'), delay: 0.4 },
-                        { name: t('for_business_page.visuals.privacy'), delay: 0.6 }
+                        { name: t('for_business_page.visual_compliance.gdpr'), delay: 0.2 },
+                        { name: t('for_business_page.visual_compliance.sovereignty'), delay: 0.4 },
+                        { name: t('for_business_page.visual_compliance.privacy'), delay: 0.6 }
                     ].map((item, index) => (
                         <motion.div
                             key={index}
@@ -103,7 +103,7 @@ export const VisualCompliance: React.FC = () => {
                 />
 
                 <div style={{ fontSize: '10px', color: '#888', marginTop: '8px', textAlign: 'right' }}>
-                    Status: Fully Compliant
+                    {t('for_business_page.visual_compliance.status_label')}
                 </div>
             </div>
 

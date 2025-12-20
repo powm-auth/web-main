@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { LanguageSelector } from './LanguageSelector';
 import { useNavigate, Link } from 'react-router-dom';
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
           {t('nav.forBusiness')}
         </button>
 
-        <button className={styles.getAppBtn} onClick={() => navigate('/wip')}>
+        <button className={styles.getAppBtn} onClick={() => navigate('/download')}>
           {t('nav.getApp')}
         </button>
       </div>

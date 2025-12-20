@@ -83,7 +83,7 @@ export const VisualLiability: React.FC = () => {
                     }}
                 >
                     <Server size={14} color="#666" />
-                    <span style={{ fontSize: '12px', color: '#666', textDecoration: 'line-through' }}>DATA</span>
+                    <span style={{ fontSize: '12px', color: '#666', textDecoration: 'line-through' }}>{t('for_business_page.visual_liability.data_label')}</span>
                 </motion.div>
 
                 <motion.div

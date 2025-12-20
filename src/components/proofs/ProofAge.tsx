@@ -1,8 +1,9 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export const ProofAge: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
@@ -53,7 +54,7 @@ export const ProofAge: React.FC = () => {
                 }}
             >
                 <div style={{ fontSize: '14px', color: '#888', fontWeight: 500, letterSpacing: '0.05em' }}>
-                    PROOF GENERATED
+                    {t('proofs.age.generated')}
                 </div>
                 <div style={{
                     fontSize: '36px',
@@ -61,9 +62,9 @@ export const ProofAge: React.FC = () => {
                     color: '#fff',
                     textShadow: '0 0 20px rgba(255,255,255,0.2)'
                 }}>
-                    Age ≥ 18
+                    {t('proofs.age.value')}
                 </div>
-                
+
                 <div style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -80,17 +81,17 @@ export const ProofAge: React.FC = () => {
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                    VERIFIED
+                    {t('proofs.age.verified')}
                 </div>
             </motion.div>
 
-            <motion.div 
+            <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
                 style={{ marginTop: '2rem', display: 'flex', flexDirection: 'column', gap: '8px', width: '100%' }}
             >
-                {['DOB', 'NAME', 'ADDRESS'].map((item) => (
+                {[t('proofs.age.dob'), t('proofs.age.name'), t('proofs.age.address')].map((item) => (
                     <div key={item} style={{
                         display: 'flex',
                         justifyContent: 'space-between',
@@ -101,17 +102,17 @@ export const ProofAge: React.FC = () => {
                         color: '#666'
                     }}>
                         <span>{item}</span>
-                        <span style={{ 
-                            background: '#333', 
-                            width: '60px', 
-                            height: '10px', 
+                        <span style={{
+                            background: '#333',
+                            width: '60px',
+                            height: '10px',
                             borderRadius: '4px',
                             opacity: 0.5
                         }} />
                     </div>
                 ))}
             </motion.div>
-            
+
             <div style={{
                 position: 'absolute',
                 bottom: '16px',
@@ -120,7 +121,7 @@ export const ProofAge: React.FC = () => {
                 textTransform: 'uppercase',
                 letterSpacing: '1px'
             }}>
-                Zero-Knowledge Proof
+                {t('proofs.age.zkp')}
             </div>
         </motion.div>
     );

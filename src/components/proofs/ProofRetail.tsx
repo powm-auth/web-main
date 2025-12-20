@@ -3,7 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { QrCode } from 'lucide-react';
 
+import { useTranslation } from 'react-i18next';
+
 export const ProofRetail: React.FC = () => {
+    const { t } = useTranslation();
     return (
         <div style={{ position: 'relative', width: '300px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 
@@ -29,7 +32,7 @@ export const ProofRetail: React.FC = () => {
                     boxShadow: '-10px 10px 30px rgba(0,0,0,0.5)'
                 }}
             >
-                <div style={{ color: '#555', fontSize: '10px', marginBottom: '10px', letterSpacing: '1px' }}>MERCHANT POS</div>
+                <div style={{ color: '#555', fontSize: '10px', marginBottom: '10px', letterSpacing: '1px' }}>{t('proofs.retail.pos')}</div>
                 <motion.div
                     animate={{
                         scale: [1, 1.1, 1],
@@ -51,7 +54,7 @@ export const ProofRetail: React.FC = () => {
                         <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                 </motion.div>
-                <div style={{ color: '#fff', fontSize: '18px', fontWeight: 700 }}>APPROVED</div>
+                <div style={{ color: '#fff', fontSize: '18px', fontWeight: 700 }}>{t('proofs.retail.approved')}</div>
             </motion.div>
 
             {/* User Phone */}
@@ -92,7 +95,7 @@ export const ProofRetail: React.FC = () => {
                 </div>
 
                 <div style={{ marginTop: '20px', textAlign: 'center' }}>
-                    <div style={{ fontSize: '10px', color: '#666' }}>Scanning...</div>
+                    <div style={{ fontSize: '10px', color: '#666' }}>{t('proofs.retail.scanning')}</div>
                     <motion.div
                         animate={{ height: ['0%', '35%', '0%'], opacity: [0, 1, 0] }}
                         transition={{ duration: 1.5, repeat: Infinity }}

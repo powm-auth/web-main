@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { Navbar } from '../components/Navbar';
 import { HeroSection } from '../components/HeroSection';
 import { BentoGrid } from '../components/BentoGrid';
 import { PhoneDemo } from '../components/PhoneDemo';
@@ -10,6 +9,7 @@ import { useScroll, useTransform } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import bgImage from '../assets/background.png';
 import { SEO } from '../components/SEO';
+import { PageTransition } from '../components/PageTransition';
 
 export const LandingPage: React.FC = () => {
   const { t } = useTranslation();
@@ -29,31 +29,34 @@ export const LandingPage: React.FC = () => {
         description={t('seo.home.description', 'Powm is the first double-blind identity wallet for the digital age.')}
       />
       <GrainyBackground overlayOpacity={overlayOpacity} backgroundImage={bgImage} />
-      <Navbar />
-      <main>
-        <HeroSection />
 
-        <div ref={bentoRef} style={{ margin: '4rem 0' }}>
-          <h2 style={{
-            textAlign: 'center',
-            fontSize: '2.5rem',
-            marginBottom: '2rem',
-            background: 'var(--gradient-text)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'var(--white)',
-          }}>
-            {t('sections.privacyBack')}
-          </h2>
-          <BentoGrid />
-        </div>
+      {/* Disable Render Gate for Landing Page to ensure useScroll refs initialize correctly */}
+      <PageTransition disableGate>
+        <main>
+          <HeroSection />
 
-        <div style={{ margin: '4rem 0' }}>
-          <PhoneDemo />
-        </div>
+          <div ref={bentoRef} style={{ margin: '4rem 0' }}>
+            <h2 style={{
+              textAlign: 'center',
+              fontSize: '2.5rem',
+              marginBottom: '2rem',
+              background: 'var(--gradient-text)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'var(--white)',
+            }}>
+              {t('sections.privacyBack')}
+            </h2>
+            <BentoGrid />
+          </div>
 
-        <ScreenshotCarousel />
-      </main>
-      <Footer />
+          <div style={{ margin: '4rem 0' }}>
+            <PhoneDemo />
+          </div>
+
+          <ScreenshotCarousel />
+        </main>
+        <Footer />
+      </PageTransition>
     </div>
   );
 };

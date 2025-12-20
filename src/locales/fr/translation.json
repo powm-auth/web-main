@@ -76,22 +76,25 @@
         }
       }
     },
-    "visuals": {
+    "visual_compliance": {
       "compliance_check": "Vérification Réglementaire",
       "gdpr": "Conformité RGPD",
       "sovereignty": "Souveraineté des Données",
-      "privacy": "Confidentialité Préservée"
+      "privacy": "Confidentialité Préservée",
+      "status_label": "Statut : Entièrement Conforme"
     },
     "visual_onboarding": {
       "scan": "Scanner pour Vérifier",
       "processing": "Validation de la Preuve...",
       "verified": "Vérifié",
-      "valid": "Preuve Zéro-Divulgation Valide"
+      "valid": "Preuve Zéro-Divulgation Valide",
+      "seconds": "s"
     },
     "visual_liability": {
       "protected": "Protégé",
       "zero_retention": "Zéro Rétention",
-      "yes_no_only": "Oui/Non Cryptographique Seul"
+      "yes_no_only": "Oui/Non Cryptographique Seul",
+      "data_label": "DONNÉES"
     },
     "visual_integration": {
       "installed": "+ @powm/sdk@1.0.0 installé",
@@ -147,7 +150,8 @@
         "proof": "Retourne un Jeton d'Humanité Unique dérivé de l'ID.",
         "hidden": "Qui est la personne. Confirme juste \"Utilisateur X est un humain unique qui n'a pas encore voté.\""
       }
-    }
+    },
+    "cta_button": "Commencer"
   },
   "hero": {
     "headline": "Prouvez l'âge.\nPas l'identité.",
@@ -385,6 +389,56 @@
           "content": "Alors que la demande pour l'identité numérique croît, la société rejette le modèle \"État de Surveillance\". Powm se positionne comme une <strong>Utilité Externe Neutre</strong> : nous n'avons pas de réseau publicitaire, pas d'agenda politique et pas de monétisation des données.\n\nNous construisons l'infrastructure où Vie Privée et Sécurité sont partenaires. En tirant parti de la cryptographie moderne, nous permettons aux entreprises de faire respecter les lois du monde physique tout en préservant la liberté du monde numérique.\n\nPowm : <strong>Prouvez l'Âge. Pas l'Identité.</strong>\n\nContact et Démo\nPrêt à éliminer la friction de vérification et la responsabilité ? Email : contact@powm.app"
         }
       ]
+    }
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "emailPlaceholder": "Votre email",
+    "submit": "Envoyer la demande",
+    "successTitle": "Demande envoyée",
+    "successMessage": "Nous vous contacterons bientôt."
+  },
+  "download_page": {
+    "title": "Télécharger Powm",
+    "subtitle": "Pré-alpha bientôt disponible",
+    "button": "Je suis intéressé par Powm"
+  },
+  "notfound_page": {
+    "title": "404 - Page non trouvée"
+  },
+  "wip_page": {
+    "title": "Ça arrive bientôt"
+  },
+  "proofs": {
+    "age": {
+      "generated": "PREUVE GÉNÉRÉE",
+      "value": "Âge ≥ 18",
+      "verified": "VÉRIFIÉ",
+      "dob": "DDN",
+      "name": "NOM",
+      "address": "ADRESSE",
+      "zkp": "Preuve à Divulgation Nulle"
+    },
+    "identity": {
+      "id_name": "Powm ID",
+      "credential": "Identifiant Vérifié",
+      "status": "Statut",
+      "status_value": "Identité Vérifiée",
+      "first_name": "Prénom",
+      "name_val": "Sarah",
+      "last_name": "Nom",
+      "certified": "CERTIFIÉ P2P"
+    },
+    "retail": {
+      "pos": "TERMINAL MARCHAND",
+      "approved": "APPROUVÉ",
+      "scanning": "Scan en cours..."
+    },
+    "humanity": {
+      "token": "JETON ANTI-SYBIL",
+      "human": "Humain Unique",
+      "score": "Score d'Unicité",
+      "non_transferable": "NON-TRANSFÉRABLE"
     }
   }
 }
