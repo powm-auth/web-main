@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
         <Link to="/blog" className={styles.navLink}>{t('nav.blog')}</Link>
         <a href="#" className={styles.navLink} onClick={(e) => { e.preventDefault(); navigate('/wip'); }}>{t('nav.documentation')}</a>
 
-        <button className={styles.businessBtn} onClick={() => navigate('/wip')}>
+        <button className={styles.businessBtn} onClick={() => navigate('/for-business')}>
           {t('nav.forBusiness')}
         </button>
 
@@ -107,7 +107,7 @@ export const Navbar: React.FC = () => {
           <a href="#" className={styles.mobileNavLink} onClick={(e) => { e.preventDefault(); closeMenu(); navigate('/wip'); }}>{t('nav.documentation')}</a>
 
           <div className={styles.mobileButtons}>
-            <button className={styles.businessBtn} onClick={() => { closeMenu(); navigate('/wip'); }}>
+            <button className={styles.businessBtn} onClick={() => { closeMenu(); navigate('/for-business'); }}>
               {t('nav.forBusiness')}
             </button>
 

@@ -5,26 +5,22 @@ import { EyeOff, ShieldCheck } from 'lucide-react';
 
 interface UseCaseSectionProps {
     title: string;
-    subtitle: string;
     context: string;
     challenge: string;
     proofText: string;
     hiddenData: string;
     visual: React.ReactNode;
     align?: 'left' | 'right';
-    index: number;
 }
 
 export const UseCaseSection: React.FC<UseCaseSectionProps> = ({
     title,
-    subtitle,
     context,
     challenge,
     proofText,
     hiddenData,
     visual,
-    align = 'left',
-    index
+    align = 'left'
 }) => {
     const isRight = align === 'right';
 
@@ -51,18 +47,7 @@ export const UseCaseSection: React.FC<UseCaseSectionProps> = ({
                     transition={{ duration: 0.8, delay: 0.1 }}
                     style={{ order: isRight ? 2 : 1 }}
                 >
-                    <div style={{
-                        display: 'inline-block',
-                        padding: '6px 16px',
-                        background: 'rgba(255,255,255,0.05)',
-                        borderRadius: '99px',
-                        color: '#888',
-                        fontSize: '12px',
-                        marginBottom: '1.5rem',
-                        border: '1px solid rgba(255,255,255,0.05)'
-                    }}>
-                        CASE 0{index + 1} &bull; {subtitle}
-                    </div>
+
 
                     <h3 style={{
                         fontSize: '2.5rem',

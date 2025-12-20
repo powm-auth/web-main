@@ -41,7 +41,7 @@ export const HeroSection: React.FC = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       >
-        <button className={styles.primaryBtn} onClick={() => navigate('/wip')}>
+        <button className={styles.primaryBtn} onClick={() => navigate('/download')}>
           <Apple size={20} />
           {t('hero.downloadIOS')}
         </button>

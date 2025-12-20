@@ -18,6 +18,97 @@
     "usecases": {
       "title": "Use Cases",
       "description": "How Powm solves identity verification."
+    },
+    "download": {
+      "title": "Download App",
+      "description": "Download the Powm App."
+    }
+  },
+  "for_business_page": {
+    "title": "For Business",
+    "hero": {
+      "title": "Boost Conversion. Eliminate Liability.",
+      "subtitle": "Stop choosing between user experience and compliance. Powm gives you both.",
+      "text": "Turn your identity verification process from a conversion killer into a seamless experience, while we handle the regulatory burden."
+    },
+    "features": {
+      "onboarding": {
+        "title": "Zero-Friction Onboarding",
+        "description": "Don't let KYC kill your conversion rates. Traditional methods like facial scans, ID uploads, and manual checks cause massive user drop-off. Powm replaces this friction with a simple \"Scan & Go\" experience.",
+        "points": {
+          "instant": "<strong>Instant Verification:</strong> Users prove their identity in seconds, not minutes.",
+          "reusable": "<strong>Reusable Identity:</strong> Users who are already verified on Powm can onboard instantly with one click.",
+          "result": "<strong>Result:</strong> More users complete the sign-up flow."
+        }
+      },
+      "liability": {
+        "title": "End Your Data Liability Nightmare",
+        "description": "You cannot leak data you do not hold. Collecting sensitive documents turns your database into a target for hackers and a constant headache for your legal team. Powm solves this forever.",
+        "points": {
+          "storage": "<strong>No Storage, No Risk:</strong> We verify the user on their device. You receive a cryptographic \"Yes/No\" proof, never the raw document.",
+          "architecture": "<strong>Secure Architecture:</strong> Eliminate the need for encrypted silos or complex data retention policies for sensitive ID documents."
+        }
+      },
+      "compliance": {
+        "title": "Automatic Regulatory Compliance",
+        "description": "Get in line with any regulation by design. Whether it is GDPR or local data protection laws, compliance usually means heavy administrative work. With Powm, you achieve compliance simply by not processing the toxic data in the first place.",
+        "points": {
+          "minimization": "<strong>Data Minimization:</strong> We strictly adhere to the principle of \"least privilege.\"",
+          "audit": "<strong>Audit-Ready:</strong> Our protocol provides cryptographic proof of verification without exposing user PII."
+        }
+      },
+      "integration": {
+        "title": "Plug & Play Integration",
+        "description": "Built by developers, for developers. We know your roadmap is full. That is why Powm is designed to be integrated in an afternoon, not a month.",
+        "points": {
+          "sdks": "<strong>Simple SDKs & APIs:</strong> Robust documentation and lightweight code.",
+          "maintenance": "<strong>Maintenance-Free:</strong> We maintain the verification engine and regulatory updates. You simply consume the API.",
+          "future": "<strong>Future-Proof:</strong> Whether you need simple age gating today or full identity proof tomorrow, the integration remains the same."
+        }
+      },
+      "team": {
+        "title": "We Are an Extension of Your Team",
+        "description": "Technology is great, partnership is better. We are not just an API key provider. We are your partners in Trust & Safety.",
+        "points": {
+          "support": "<strong>Dedicated Support:</strong> Direct access to the Powm team for integration help or debugging.",
+          "monitoring": "<strong>Proactive Monitoring:</strong> We monitor the network 24/7 to ensure uptime and security.",
+          "evolution": "<strong>Evolution:</strong> We build features based on your specific needs and feedback."
+        }
+      }
+    },
+    "visuals": {
+      "compliance_check": "Regulatory Check",
+      "gdpr": "GDPR Compliance",
+      "sovereignty": "Data Sovereignty",
+      "privacy": "Privacy Preserved"
+    },
+    "visual_onboarding": {
+      "scan": "Scan to Verify",
+      "processing": "Processing Proof...",
+      "verified": "Verified",
+      "valid": "Zero-Knowledge Proof Valid"
+    },
+    "visual_liability": {
+      "protected": "Protected",
+      "zero_retention": "Zero Retention",
+      "yes_no_only": "Cryptographic Yes/No Only"
+    },
+    "visual_integration": {
+      "installed": "+ @powm/sdk@1.0.0 installed",
+      "added_packages": "added 42 packages in 2s",
+      "done": "Done"
+    },
+    "visual_team": {
+      "partner": "Dedicated Partner",
+      "priority": "Your success is our priority.",
+      "uptime": "Uptime",
+      "support": "Support",
+      "direct": "Direct"
+    },
+    "cta": {
+      "title": "Ready to upgrade your trust flow?",
+      "subtitle": "Stop paying for outdated verification that frustrates your users. Switch to the Sovereign Wallet standard.",
+      "button": "I am interested"
     }
   },
   "usecases_page": {
@@ -61,7 +152,7 @@
   "hero": {
     "headline": "Prove the age.\nNot the identity.",
     "subheadline": "Fast private proofs without revealing everything. The first double-blind identity wallet for the digital age thinked for users.",
-    "downloadIOS": "Download for iOS",
+    "downloadIOS": "Download App",
     "readWhitepaper": "Read Whitepaper"
   },
   "sections": {

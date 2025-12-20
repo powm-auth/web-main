@@ -18,6 +18,97 @@
     "usecases": {
       "title": "Cas d'usage",
       "description": "Comment Powm résout la vérification d'identité."
+    },
+    "download": {
+      "title": "Télécharger l'App",
+      "description": "Télécharger l'application Powm."
+    }
+  },
+  "for_business_page": {
+    "title": "Pour les entreprises",
+    "hero": {
+      "title": "Booster la conversion. Éliminer la responsabilité.",
+      "subtitle": "Arrêtez de choisir entre expérience utilisateur et conformité. Powm vous offre les deux.",
+      "text": "Transformez votre processus de vérification d'identité d'un tueur de conversion en une expérience fluide, pendant que nous gérons la charge réglementaire."
+    },
+    "features": {
+      "onboarding": {
+        "title": "Onboarding Sans Friction",
+        "description": "Ne laissez pas le KYC tuer vos taux de conversion. Les méthodes traditionnelles comme le scan facial, le scan de pièces d'identité et les vérifications manuelles causent un abandon massif. Powm remplace cette friction par une simple expérience \"Scan & Go\".",
+        "points": {
+          "instant": "<strong>Vérification Instantanée :</strong> Les utilisateurs prouvent leur identité en quelques secondes, pas minutes.",
+          "reusable": "<strong>Identité Réutilisable :</strong> Les utilisateurs déjà vérifiés sur Powm peuvent s'inscrire instantanément en un clic.",
+          "result": "<strong>Résultat :</strong> Plus d'utilisateurs complètent le parcours d'inscription."
+        }
+      },
+      "liability": {
+        "title": "Mettez Fin au Cauchemar de la Responsabilité des Données",
+        "description": "Vous ne pouvez pas fuiter des données que vous ne détenez pas. Collecter des documents sensibles transforme votre base de données en cible pour les pirates et en casse-tête constant pour votre équipe juridique. Powm résout cela définitivement.",
+        "points": {
+          "storage": "<strong>Pas de Stockage, Pas de Risque :</strong> Nous vérifions l'utilisateur sur son appareil. Vous recevez une preuve cryptographique \"Oui/Non\", jamais le document brut.",
+          "architecture": "<strong>Architecture Sécurisée :</strong> Éliminez le besoin de silos chiffrés ou de politiques complexes de rétention des données pour les documents d'identité sensibles."
+        }
+      },
+      "compliance": {
+        "title": "Conformité Réglementaire Automatique",
+        "description": "Soyez conforme à toute réglementation dès la conception. Qu'il s'agisse du RGPD ou des lois locales, la conformité signifie généralement un lourd travail administratif. Avec Powm, vous atteignez la conformité simplement en ne traitant pas les données toxiques en premier lieu.",
+        "points": {
+          "minimization": "<strong>Minimisation des Données :</strong> Nous adhérons strictement au principe du \"moindre privilège\".",
+          "audit": "<strong>Prêt pour l'Audit :</strong> Notre protocole fournit une preuve cryptographique de vérification sans exposer les PII de l'utilisateur."
+        }
+      },
+      "integration": {
+        "title": "Intégration Plug & Play",
+        "description": "Conçu par des développeurs, pour des développeurs. Nous savons que votre roadmap est pleine. C'est pourquoi Powm est conçu pour être intégré en une après-midi, pas un mois.",
+        "points": {
+          "sdks": "<strong>SDKs & APIs Simples :</strong> Documentation robuste et code léger.",
+          "maintenance": "<strong>Sans Maintenance :</strong> Nous maintenons le moteur de vérification et les mises à jour réglementaires. Vous consommez simplement l'API.",
+          "future": "<strong>Pérenne :</strong> Que vous ayez besoin d'une simple vérification d'âge aujourd'hui ou d'une preuve d'identité complète demain, l'intégration reste la même."
+        }
+      },
+      "team": {
+        "title": "Nous Sommes une Extension de Votre Équipe",
+        "description": "La technologie est géniale, le partenariat est meilleur. Nous ne sommes pas juste un fournisseur de clé API. Nous sommes vos partenaires en Confiance & Sécurité.",
+        "points": {
+          "support": "<strong>Support Dédié :</strong> Accès direct à l'équipe Powm pour l'aide à l'intégration ou le débogage.",
+          "monitoring": "<strong>Monitoring Proactif :</strong> Nous surveillons le réseau 24/7 pour assurer la disponibilité et la sécurité.",
+          "evolution": "<strong>Évolution :</strong> Nous construisons des fonctionnalités basées sur vos besoins spécifiques et vos retours."
+        }
+      }
+    },
+    "visuals": {
+      "compliance_check": "Vérification Réglementaire",
+      "gdpr": "Conformité RGPD",
+      "sovereignty": "Souveraineté des Données",
+      "privacy": "Confidentialité Préservée"
+    },
+    "visual_onboarding": {
+      "scan": "Scanner pour Vérifier",
+      "processing": "Validation de la Preuve...",
+      "verified": "Vérifié",
+      "valid": "Preuve Zéro-Divulgation Valide"
+    },
+    "visual_liability": {
+      "protected": "Protégé",
+      "zero_retention": "Zéro Rétention",
+      "yes_no_only": "Oui/Non Cryptographique Seul"
+    },
+    "visual_integration": {
+      "installed": "+ @powm/sdk@1.0.0 installé",
+      "added_packages": "ajouté 42 paquets en 2s",
+      "done": "Terminé"
+    },
+    "visual_team": {
+      "partner": "Partenaire Dédié",
+      "priority": "Votre succès est notre priorité.",
+      "uptime": "Disponibilité",
+      "support": "Support",
+      "direct": "Direct"
+    },
+    "cta": {
+      "title": "Prêt à améliorer votre flux de confiance ?",
+      "subtitle": "Arrêtez de payer pour une vérification obsolète qui frustre vos utilisateurs. Passez au standard du Portefeuille Souverain.",
+      "button": "Je suis intéressé"
     }
   },
   "usecases_page": {
@@ -61,7 +152,7 @@
   "hero": {
     "headline": "Prouvez l'âge.\nPas l'identité.",
     "subheadline": "Des preuves privées et rapides sans tout révéler. Le premier portefeuille d'identité en double aveugle pour l'ère numérique, pensé pour les utilisateurs.",
-    "downloadIOS": "Télécharger pour iOS",
+    "downloadIOS": "Télécharger l'App",
     "readWhitepaper": "Lire le livre blanc"
   },
   "sections": {
